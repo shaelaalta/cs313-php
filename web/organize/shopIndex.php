@@ -52,9 +52,9 @@ switch ($action) {
         
     case 'viewCart':
         $list = $_SESSION['cart'];
-        include '../view/cart.php'
+        include '../view/cart.php';
         break;
         
     default:
-        include '../dot.php'
+        include '../dot.php';
 }
