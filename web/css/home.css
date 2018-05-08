@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Cookie|News+Cycle|Poiret+One');
+
+/* scallop link
+https://codepen.io/KarenN/pen/LpVBzv
+*/
+
+h1, h2, h3 {
+   font-family: 'Amatic SC', cursive;
+}
+
+body {
+    font-family: 'Poiret One', cursive;
+    padding: 0px;
+    margin: 0px;
+}
+
+#logo {
+    width: 20vw;
+    margin-bottom: 0px;
+}
+
+nav {
+    width: 100%; 
+    background-color: teal;
+    font-size: 90%;
+}
+
+.cNav a.icon {
+    display: block;
+    text-align: center;
+}
+
+.cNav li {
+    display: none;
+}
+
+.cNavshrinkIt a {
+    float: none;
+    display: block;
+}
+
+.cNavshrinkIt li {
+    text-align: center;
+    margin: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.cNavshrinkIt {
+    padding-left: 0px;
+}
+
+.cNavshrinkIt a.icon {
+    text-align: center;
+}
+
+nav ul{
+    padding-left: 0px;
+}
+
+nav a {
+    color: white;
+    transition: font-size 0.7s;
+    padding: 10px;
+}
+
+nav a:link {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    color: paleturquoise;
+    background-color: lightslategray;
+    font-size: 110%;
+}
+
+nav a:active {
+    color: white;
+}
+
+ul{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.cNavshrinkIt li:nth-child(5) {
+    margin-bottom: 0px;
+}
+
+nav::after {
+    position: absolute;
+    margin-top: -10px;
+    left: 0px;
+    width: 100%;
+    content: "";
+    background: radial-gradient(circle at 50% 0%, teal 35%, #535353 26%, white 40%);
+    background-color: teal;
+    background-size: 50px 80px;
+    height: 40px;
+    background-repeat: repeat-x;
+    z-index: -2;
+}
+
+#home {
+    padding: 3vw;
+}
+
+#homePic {
+    width: 90vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+/****************************************************
+*****************************************************
+* MEDIUM SCREEN
+*****************************************************
+****************************************************/
+@media (min-width: 500px) {
+    nav { 
+        font-size: 2.5vw;
+    }
+    
+    nav a {
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    nav ul{
+    /*padding: 1.5%;*/
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    }
+    
+    .cNav a.icon {
+    display: none;
+    }
+    
+    .cNav li {
+        display: block;
+    }
+}
+
+/***************************************************
+****************************************************
+* LARGE SCREEN
+****************************************************
+****************************************************/
+@media (min-width: 900px) {
+    header h1 {
+        font-size: 45pt;
+    }
+    
+    nav { 
+        font-size: 12pt;
+    }
+    
+    nav ul{
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    main {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
