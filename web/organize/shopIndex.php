@@ -39,12 +39,12 @@ switch ($action) {
         $invImg = filter_input(INPUT_POST, 'invImg', FILTER_SANITIZE_STRING);
         $itemArray = array();
         
-        array_push($itemArray.$invImg);
-        array_push($itemArray.$invName);
-        array_push($itemArray.$invDesc);
-        array_push($itemArray.$invPrice);
+        array_push($itemArray,$invImg);
+        array_push($itemArray,$invName);
+        array_push($itemArray,$invDesc);
+        array_push($itemArray,$invPrice);
         
-        array_push($_SESSION['cart'].$itemArray);
+        array_push($_SESSION['cart'],$itemArray);
         $_SESSION['count']++;
         header("location: /organize/shopIndex?action=viewCart");
         break;
