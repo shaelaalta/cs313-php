@@ -21,7 +21,7 @@ switch ($action) {
         $invName = "Straight Gym";
         $invDesc = "This baby gym with it's straight lines give it a modern, clean feel that will add to the feel of your home with it's warm wood texture.";
         $invPrice = "57.45";
-        include '../view/prodpage.php';
+        include '../view/prodPage.php';
         break;
     
     case 'curve':
@@ -29,7 +29,7 @@ switch ($action) {
         $invName = "Curved Gym";
         $invDesc = "This baby gym with it's curves gives it a sleek, modern look that will add to your home with it's warm wood texture.";
         $invPrice = "63.23";
-        include '../view/prodpage.php';
+        include '../view/prodPage.php';
         break;
         
     case 'addCart':
