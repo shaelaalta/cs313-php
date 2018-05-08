@@ -46,7 +46,10 @@
             <form id="addCart" action="/organize/shop.php" method="post">
                 <button type="submit" name="action" value="addCart">Add to Cart</button>
                 <input type="hidden" name="invName" <?php echo "value='$invName'"; ?>>
-                <input type="hidden" name="invDesc" <?php echo "value='$invDesc'"; ?>>
+                <input type="hidden" name="invDesc" 
+                       <?php 
+                       $str = addslashes($invDesc);
+                       echo "value='$str'"; ?>>
                 <input type="hidden" name="invPrice" <?php echo "value='$invPrice'"; ?>>
                 <input type="hidden" name="invImg" <?php echo "value='$imagePlace'"; ?>>
             </form>
