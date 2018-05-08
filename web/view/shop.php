@@ -40,12 +40,12 @@
         <main id="shop">
             <div id="group">
             <div id="item">
-                <a href="/organize/shopIndex.php?action='curve'"><img src="/images/straightGym.jpg" alt="image of the straight gym"></a>
+                <a href="/organize/shopIndex.php?action=curve"><img src="/images/straightGym.jpg" alt="image of the straight gym"></a>
                 <hr>
                 <h2>Straight Lines Play Gym</h2><span>$57.45</span>
             </div>
             <div id="item">
-                <a href="/organize/shopIndex.php?action='straight'"><img src="/images/curveGym.jpg" alt="image of the straight gym"></a>
+                <a href="/organize/shopIndex.php?action=straight"><img src="/images/curveGym.jpg" alt="image of the straight gym"></a>
                 <hr>
                 <h2>Play Gym</h2><span>$63.23</span>
             </div>
