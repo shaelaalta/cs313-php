@@ -43,7 +43,7 @@
                 echo $prod;
             ?>
             
-            <form id="addCart" action="/organize/shop.php" method="post">
+            <form id="addCart" action="/organize/shopIndex.php" method="post">
                 <button type="submit" name="action" value="addCart">Add to Cart</button>
                 <input type="hidden" name="invName" <?php echo "value='$invName'"; ?>>
                 <input type="hidden" name="invDesc" 
