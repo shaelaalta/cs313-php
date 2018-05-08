@@ -45,6 +45,7 @@
                     $pd .= "<img src=$lists[invImg]>";
                     $pd .= "<h2>$lists[invName]</h2><span>$lists[invPrice]</span><hr></div>";
                 }
+                $pd .="</div>";
                 echo $pd;
             ?>
         </main>
