@@ -1,3 +1,29 @@
+#shop {
+    margin-top: 30px;
+}
+
+#item {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 3vw;
+}
+
+#item img{
+    width: 100%;
+}
+
+#item {
+    border: solid black;
+    text-align: center;
+    padding-bottom: 2vw;
+}
+
+#item h2 {
+    margin: 4px;
+}
+
+/****************************************************
 *****************************************************
 * MEDIUM SCREEN
 *****************************************************
