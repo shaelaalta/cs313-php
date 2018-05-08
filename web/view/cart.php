@@ -29,8 +29,8 @@
             <nav class="cNav" id="myNav">
             <ul>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-                <li><a href="hello.php">Home</a></li>
-                <li><a href="/view/prodPage.php">Shop</a></li>
+                <li><a href="dot.php">Home</a></li>
+                <li><a href="/view/shop.php">Shop</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
@@ -42,7 +42,7 @@
                 $pd = '<div id="cart">';
                 foreach($list as $lists){
                     $pd .= '<div id="item">';
-                    $pd .= "<img src=$lists[$invImg]>";
+                    $pd .= "<img src=$lists[$itemArray][$invImg]>";
                     $pd .= "<h2>$lists[$invName]</h2><span>$lists[$invPrice]</span><hr></div>";
                 }
                 $pd .="</div>";
