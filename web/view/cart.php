@@ -43,7 +43,7 @@
                 foreach($list as $lists){
                     $pd .= '<div id="item">';
                     $pd .= "<img src=" . $lists[0] . ">";
-                    $pd .= "<h2>$lists[$invName]</h2><span>$lists[$invPrice]</span><hr></div>";
+                    $pd .= "<h2>$lists[1]</h2><span>$lists[2]</span><hr></div>";
                 }
                 $pd .="</div>";
                 echo $pd;
