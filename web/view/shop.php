@@ -24,7 +24,7 @@
           }
       </script>
         
-        <?php include $_SERVER['DOCUMENT_ROOT'] . 'common/header.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; ?>
         
         <main id="shop">
             <div id="group">
