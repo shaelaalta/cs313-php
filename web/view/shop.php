@@ -45,7 +45,7 @@
                 <h2>Straight Lines Play Gym</h2><span>$57.45</span>
             </div>
             <div id="item">
-                <a href="/organize/shop.php?action=curve"><img src="/images/curveGym.jpg" alt="image of the straight gym"></a>
+                <a href="../organize/shop.php?action=curve"><img src="/images/curveGym.jpg" alt="image of the straight gym"></a>
                 <hr>
                 <h2>Play Gym</h2><span>$63.23</span>
             </div>
