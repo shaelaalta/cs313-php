@@ -34,14 +34,12 @@ switch ($action) {
         
     case 'addCart':
         $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
-        $invDesc = filter_input(INPUT_POST, 'invDesc', FILTER_SANITIZE_STRING);
         $invPrice = filter_input(INPUT_POST, 'invPrice', FILTER_SANITIZE_STRING);
         $invImg = filter_input(INPUT_POST, 'invImg', FILTER_SANITIZE_STRING);
         $itemArray = array();
         
         array_push($itemArray,$invImg);
         array_push($itemArray,$invName);
-        array_push($itemArray,$invDesc);
         array_push($itemArray,$invPrice);
         
         array_push($_SESSION['cart'],$itemArray);
