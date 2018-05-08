@@ -47,7 +47,7 @@ switch ($action) {
         
         array_push($_SESSION['cart'].$itemArray);
         $_SESSION['count']++;
-        header("location: /shop/index.php?action=viewCart");
+        header("location: /organize/shopIndex?action=viewCart");
         break;
         
     case 'viewCart':
