@@ -1,6 +1,5 @@
 <?php
 /* shop organizer*/
-
 session_start();
 
 if(!isset($_SESSION['cart'])){
@@ -29,7 +28,7 @@ switch ($action) {
         $imagePlace = "/images/curveGym.jpg";
         $invName = "Curved Gym";
         $invDesc = "This baby gym with it's curves gives it a sleek, modern look that will add to your home with it's warm wood texture.";
-        $invPrice "63.23";
+        $invPrice = "63.23";
         include '../view/prodpage.php';
         break;
         
