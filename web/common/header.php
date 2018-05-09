@@ -3,10 +3,10 @@
         <img id=logo src="/images/dotLogo.jpg">
         <div id='cartBlock'>
             <img id='shopCart' src="/images/babyCart.jpg">
-            <br><p>Items: 
+            <br><p> 
             <?php
                 if(isset($_SESSION['count'])){
-                    echo $_SESSION['count'];
+                    echo "Items: " . $_SESSION['count'];
                 }
             ?>
             </p>
