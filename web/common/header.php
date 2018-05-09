@@ -2,11 +2,13 @@
     <div id=tipTop>
         <img id=logo src="/images/dotLogo.jpg">
         <div id='cartBlock'>
-            <img id='shopCart' src="/images/babyCart.jpg">
-            <br><p> 
+            <a href="../organize/shopIndex.php?action=viewCart"><img id='shopCart' src="/images/babyCart.jpg"></a>
+            <br><p>
             <?php
                 if(isset($_SESSION['count'])){
-                    echo "Items: " . $_SESSION['count'];
+                    if($_SESSION['count'] > 0){
+                        echo "Items: " . $_SESSION['count'];
+                    }
                 }
             ?>
             </p>

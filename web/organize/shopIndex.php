@@ -48,8 +48,13 @@ switch ($action) {
         break;
         
     case 'viewCart':
-        $list = $_SESSION['cart'];
-        include '../view/cart.php';
+        if($_SESSION['count'] == 0){
+            include '../dot.php'
+        }
+        else {
+            $list = $_SESSION['cart'];
+            include '../view/cart.php';
+        }
         break;
         
     default:
