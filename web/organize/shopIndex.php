@@ -48,7 +48,7 @@ switch ($action) {
         break;
         
     case 'viewCart':
-        if($_SESSION['count'] == 0){
+        if($_SESSION['count'] = 0){
             include '../dot.php'
         }
         else {
