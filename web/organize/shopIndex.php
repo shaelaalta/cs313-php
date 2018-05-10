@@ -69,6 +69,17 @@ switch ($action) {
             include '../view/cart.php';
         }
         break;
+    
+    case 'remove':
+        $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
+        
+        $key = array_search($invName, $_SESSION['cart']);
+        unset($_SESSION['cart'][$key]);
+        
+        $_SESSION['cart'] = array_values($_SESSION['cart']);
+        
+        header("location: shopIndex.php?action=viewCart");
+        break;
         
     default:
         include '../dot.php';
