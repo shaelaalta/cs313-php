@@ -37,10 +37,7 @@ switch ($action) {
         
         $cartParty = $_SESSION['cart'];
         
-        if(empty($cartParty)){
-            continue;
-        }
-        /*else{
+        if(!empty($cartParty)){
             foreach($cartParty as $cartP){
                 if($cartP[1] == $invName){
                     $cartP[3]++;
@@ -51,7 +48,7 @@ switch ($action) {
                 else
                     continue;
             }
-        }*/
+        }
         
         $invPrice = filter_input(INPUT_POST, 'invPrice', FILTER_SANITIZE_STRING);
         $invImg = filter_input(INPUT_POST, 'invImg', FILTER_SANITIZE_STRING);
