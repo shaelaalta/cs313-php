@@ -36,8 +36,10 @@ switch ($action) {
         $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
         
         $cartParty = $_SESSION['cart'];
-        if(empty($cartParty))
+        
+        if(empty($cartParty)){
             continue;
+        }
         else{
             foreach($cartParty as $cartP){
                 if($cartP[1] == $invName){
