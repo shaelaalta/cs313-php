@@ -40,7 +40,7 @@ switch ($action) {
         if(!empty($cartParty)){
             foreach($cartParty as $cartP){
                 if($cartP[1] == $invName){
-                    $cartP[3]++;
+                    $cartP[$amountAdd]++;
                     $_SESSION['count']++;
                     header("location: shopIndex.php?action=viewCart");
                     break 2;
