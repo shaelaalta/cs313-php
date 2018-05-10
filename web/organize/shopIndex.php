@@ -40,8 +40,9 @@ switch ($action) {
             continue;
         else{
             foreach($cartParty as $cartP){
-                if($cartP[1] === $invName){
+                if($cartP[1] == $invName){
                     $cartP[3]++;
+                    $_SESSION['count']++;
                     header("location: shopIndex.php?action=viewCart");
                     break;
                 }
@@ -49,6 +50,7 @@ switch ($action) {
                     continue;
             }
         }
+        
         $invPrice = filter_input(INPUT_POST, 'invPrice', FILTER_SANITIZE_STRING);
         $invImg = filter_input(INPUT_POST, 'invImg', FILTER_SANITIZE_STRING);
         $amountAdd = 1;
