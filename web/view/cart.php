@@ -33,7 +33,7 @@
                     $pd .= '<div id="item">';
                     $pd .= "<img src=" . $lists[0] . ">";
                     $pd .= "<h2>$lists[1]</h2><span>$$lists[2]</span><br><span>Amount: $lists[3]</span>";
-                    $pd .= "<form id='remCart' action='/organize/shopIndex.php' method='post'><button type='submit' name='action' value='remCart'>Remove From Cart</button><input type='hidden' name='invName' value='" .$lists[1] ."'>";
+                    $pd .= "<form id='remCart' action='/organize/shopIndex.php' method='post'><button type='submit' name='action' value='remove'>Remove From Cart</button><input type='hidden' name='invName' value='" .$lists[1] ."'>";
                     $pd .= "<hr></div>";
                 }
             $pd .="</div>";
