@@ -63,7 +63,7 @@ switch ($action) {
         array_push($itemArray,$invPrice);
         array_push($itemArray,$amountAdd);
         
-        array_push($cartParty,$itemArray);
+        array_push($_SESSION['cart'],$itemArray);
         
         $_SESSION['count']++;
         header("location: shopIndex.php?action=viewCart");
