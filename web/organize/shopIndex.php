@@ -50,11 +50,11 @@ switch ($action) {
             }
         }*/
         
-        if(!empty($cartParty)){
-            $length = count($cartParty);
+        if(!empty($_SESSION['cart'])){
+            $length = count($_SESSION['cart']);
             for ($i = 0; $i < $length; $i++){
-                if($cartParty[$i][1] == $invName){
-                    $cartParty[$i][3]++;
+                if($_SESSION['cart'][$i][1] == $invName){
+                    $_SESSION['cart'][$i][3]++;
                     $_SESSION['count']++;
                     header("location: shopIndex.php?action=viewCart");
                     break 2;
