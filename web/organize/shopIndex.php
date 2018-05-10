@@ -35,21 +35,6 @@ switch ($action) {
     case 'addCart':
         $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
         
-        $cartParty = $_SESSION['cart'];
-        
-        /*if(!empty($cartParty)){
-            foreach($cartParty as $cartP){
-                if($cartP[1] == $invName){
-                    $cartP[3]++;
-                    $_SESSION['count']++;
-                    header("location: shopIndex.php?action=viewCart");
-                    break 2;
-                }
-                else
-                    continue;
-            }
-        }*/
-        
         if(!empty($_SESSION['cart'])){
             $length = count($_SESSION['cart']);
             for ($i = 0; $i < $length; $i++){
@@ -68,9 +53,6 @@ switch ($action) {
         $invImg = filter_input(INPUT_POST, 'invImg', FILTER_SANITIZE_STRING);
         $amountAdd = 1;
         $itemArray = array($invImg, $invName, $invPrice, $amountAdd);
-        //$itemArray = array();
-        
-        //array_push($itemArray, $invImg, $invName, $invPrice, $amountAdd);
         
         array_push($_SESSION['cart'],$itemArray);
         
