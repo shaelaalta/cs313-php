@@ -28,6 +28,7 @@
         
         <main id="cart">
             <?php
+            echo $list[0][3];
                 $pd = '<div id="cart">';
                 foreach($list as $lists){
                     $pd .= '<div id="item">';
