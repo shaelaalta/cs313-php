@@ -43,7 +43,7 @@ switch ($action) {
                     $cartP[3]++;
                     $_SESSION['count']++;
                     header("location: shopIndex.php?action=viewCart");
-                    break;
+                    break 2;
                 }
                 else
                     continue;
