@@ -40,7 +40,7 @@ switch ($action) {
         if(!empty($cartParty)){
             foreach($cartParty as $cartP){
                 if($cartP[1] == $invName){
-                    $cartP[3]++;
+                    $cartP[3] = $cartP[3] + 1;
                     $_SESSION['count']++;
                     header("location: shopIndex.php?action=viewCart");
                     break 2;
@@ -53,12 +53,10 @@ switch ($action) {
         $invPrice = filter_input(INPUT_POST, 'invPrice', FILTER_SANITIZE_STRING);
         $invImg = filter_input(INPUT_POST, 'invImg', FILTER_SANITIZE_STRING);
         $amountAdd = 1;
-        $itemArray = array();
+        $itemArray = array($invImg, $invName, $invPrice, $amountAdd);
+        //$itemArray = array();
         
-        array_push($itemArray,$invImg);
-        array_push($itemArray,$invName);
-        array_push($itemArray,$invPrice);
-        array_push($itemArray,$amountAdd);
+        //array_push($itemArray, $invImg, $invName, $invPrice, $amountAdd);
         
         array_push($_SESSION['cart'],$itemArray);
         
