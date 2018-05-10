@@ -28,7 +28,7 @@
         
         <main id="cart">
             <?php
-            echo $list[0][3];
+            echo $list[0][3]. " " . $list[0][1];
                 $pd = '<div id="cart">';
                 foreach($list as $lists){
                     $pd .= '<div id="item">';
