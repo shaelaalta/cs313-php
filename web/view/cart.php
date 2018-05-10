@@ -28,12 +28,11 @@
         
         <main id="cart">
             <?php
-            echo $list[0][3];
                 $pd = '<div id="cart">';
                 foreach($list as $lists){
                     $pd .= '<div id="item">';
                     $pd .= "<img src=" . $lists[0] . ">";
-                    $pd .= "<h2>$lists[1]</h2><span>$$lists[2]</span><br><span>Amount: $list[3]</span><hr></div>";
+                    $pd .= "<h2>$lists[1]</h2><span>$$lists[2]</span><br><span>Amount: $lists[3]</span><hr></div>";
                 }
                 $pd .="</div>";
                 echo $pd;
