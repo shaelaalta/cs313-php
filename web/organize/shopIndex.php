@@ -51,7 +51,8 @@ switch ($action) {
         }*/
         
         if(!empty($cartParty)){
-            for ($i = 0; $i < $cartParty.length; $i++){
+            $length = count($cartParty);
+            for ($i = 0; $i < $length; $i++){
                 if($cartParty[$i][1] == $invName){
                     $cartParty[$i][3]++;
                     $_SESSION['count']++;
