@@ -37,10 +37,23 @@ switch ($action) {
         
         $cartParty = $_SESSION['cart'];
         
-        if(!empty($cartParty)){
+        /*if(!empty($cartParty)){
             foreach($cartParty as $cartP){
                 if($cartP[1] == $invName){
-                    $cartP[$amountAdd]++;
+                    $cartP[3]++;
+                    $_SESSION['count']++;
+                    header("location: shopIndex.php?action=viewCart");
+                    break 2;
+                }
+                else
+                    continue;
+            }
+        }*/
+        
+        if(!empty($cartParty)){
+            for (int i = 0; i < $cartParty.length; i++){
+                if($cartParty[i][1] == $invName){
+                    $cartParty[i][3]++;
                     $_SESSION['count']++;
                     header("location: shopIndex.php?action=viewCart");
                     break 2;
