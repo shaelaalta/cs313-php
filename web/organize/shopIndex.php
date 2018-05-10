@@ -74,7 +74,8 @@ switch ($action) {
         $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
         
         $key = array_search($invName, $_SESSION['cart']);
-        $_SESSION['count'] = $_SESSION['count'] - $key[3];
+        $countOfItem = $key[3];
+        $_SESSION['count'] = $_SESSION['count'] - $countOfItem;
     
         unset($_SESSION['cart'][$key]);
         
