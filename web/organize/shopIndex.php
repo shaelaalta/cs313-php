@@ -35,12 +35,12 @@ switch ($action) {
     case 'addCart':
         $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
         
-        /*$cartParty = $_SESSION['cart'];
+        $cartParty = $_SESSION['cart'];
         
         if(empty($cartParty)){
             continue;
         }
-        else{
+        /*else{
             foreach($cartParty as $cartP){
                 if($cartP[1] == $invName){
                     $cartP[3]++;
