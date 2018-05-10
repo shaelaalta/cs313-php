@@ -42,6 +42,7 @@ switch ($action) {
             foreach($cartParty as $cartP){
                 if($cartP[1] === $invName){
                     $cartP[3]++;
+                    header("location: shopIndex.php?action=viewCart");
                     break;
                 }
                 else
