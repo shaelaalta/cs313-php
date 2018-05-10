@@ -35,7 +35,7 @@ switch ($action) {
     case 'addCart':
         $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
         
-        $cartParty = $_SESSION['cart'];
+        /*$cartParty = $_SESSION['cart'];
         
         if(empty($cartParty)){
             continue;
@@ -51,17 +51,17 @@ switch ($action) {
                 else
                     continue;
             }
-        }
+        }*/
         
         $invPrice = filter_input(INPUT_POST, 'invPrice', FILTER_SANITIZE_STRING);
         $invImg = filter_input(INPUT_POST, 'invImg', FILTER_SANITIZE_STRING);
-        $amountAdd = 1;
+        //$amountAdd = 1;
         $itemArray = array();
         
         array_push($itemArray,$invImg);
         array_push($itemArray,$invName);
         array_push($itemArray,$invPrice);
-        array_push($itemArray,$amountAdd);
+        //array_push($itemArray,$amountAdd);
         
         array_push($_SESSION['cart'],$itemArray);
         
