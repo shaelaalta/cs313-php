@@ -10,6 +10,10 @@ if(!isset($_SESSION['count'])){
     $_SESSION['count'] = 0;
 }
 
+if(!isset($_SESSION['user'])){
+    $_SESSION['user'] = array();
+}
+
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL){
  $action = filter_input(INPUT_GET, 'action');
@@ -20,7 +24,7 @@ switch ($action) {
         $imagePlace = "/images/straightGym.jpg";
         $invName = "Straight Gym";
         $invDesc = "This baby gym with it's straight lines give it a modern, clean feel that will add to the feel of your home with it's warm wood texture.";
-        $invPrice = "57.45";
+        $invPrice = 57.45;
         include '../view/prodPage.php';
         break;
     
@@ -28,7 +32,7 @@ switch ($action) {
         $imagePlace = "/images/curveGym.jpg";
         $invName = "Curved Gym";
         $invDesc = "This baby gym with it's curves gives it a sleek, modern look that will add to your home with it's warm wood texture.";
-        $invPrice = "63.23";
+        $invPrice = 63.23;
         include '../view/prodPage.php';
         break;
         
@@ -49,7 +53,7 @@ switch ($action) {
             }
         }
         
-        $invPrice = filter_input(INPUT_POST, 'invPrice', FILTER_SANITIZE_STRING);
+        $invPrice = filter_input(INPUT_POST, 'invPrice', FILTER_SANITIZE_NUMBER_FLOAT);
         $invImg = filter_input(INPUT_POST, 'invImg', FILTER_SANITIZE_STRING);
         $amountAdd = 1;
         $itemArray = array($invImg, $invName, $invPrice, $amountAdd);
@@ -76,8 +80,7 @@ switch ($action) {
         
         for ($i = 0; $i < $length; $i++){
                 if($_SESSION['cart'][$i][1] == $invName){
-                    $amountC = $_SESSION['cart'][$i][3];
-                    $_SESSION['count'] -= $amountC;
+                    $_SESSION['count'] -= $_SESSION['cart'][$i][3];
                     break;
                 }
         }
@@ -87,6 +90,39 @@ switch ($action) {
         $_SESSION['cart'] = array_values($_SESSION['cart']);
         
         header("location: shopIndex.php?action=viewCart");
+        break;
+        
+    case 'openCheckout':
+        include '../view/checkout.php';
+        break;
+        
+    case 'checkout':
+        $clientFirstname = filter_input(INPUT_POST, 'clientFirstname', FILTER_SANITIZE_STRING);
+        $clientLastname = filter_input(INPUT_POST, 'clientLastname', FILTER_SANITIZE_STRING);
+        $clientEmail = filter_input(INPUT_POST, 'clientEmail', FILTER_SANITIZE_EMAIL);
+        $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
+        
+        if(empty($clientFirstname) || empty($clientLastname) || 
+                empty($clientEmail) || empty($address)){
+            $message = "<p class='notice'>Please provide information for all empty form fields.</p>";
+            include '../view/checkout.php';
+                exit; 
+        }
+        
+        array_push($_SESSION['user'], $clientFirstname, $clientLastname, $clientEmail, $address);
+        header("location: shopIndex.php?action=confirm");
+        break;
+        
+    case 'confirm':
+        $list = $_SESSION['cart'];
+        $userInfo = $_SESSION['user'];
+        include '../view/confirm.php';
+        break;
+        
+    case 'cancel':
+        session_unset();
+        session_destroy();
+        header("location: /dot.php");
         break;
         
     default:
