@@ -75,6 +75,7 @@ switch ($action) {
         
         $key = array_search($invName, $_SESSION['cart']);
         $countOfItem = $key[3];
+        echo $coundOfItem;
         $_SESSION['count'] = $_SESSION['count'] - $countOfItem;
     
         unset($_SESSION['cart'][$key]);
