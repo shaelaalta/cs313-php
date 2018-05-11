@@ -29,7 +29,7 @@
         
         <main id="product">
             <?php 
-                $prod = "<img src='$imagePlace'><h1>$invName</h1><p>$invDesc</p><span>$$invPrice</span>";
+                $prod = "<img src='$imagePlace'><h1>$invName</h1><p>$invDesc</p><span>$". $invPrice . "</span>";
                 echo $prod;
             ?>
             

@@ -30,9 +30,9 @@
             <?php
             $sh = '<div id="show">';
                 $sh .= "<h2>Billing Info</h2>";
-                $sh .= "<h3>$useri[$clientFirstname] $useri[$clientLastname]</h3>";
-                $sh .= "<h4>email: $useri[$clientEmail]</h4>";
-                $sh .= "<h4>address: $useri[$address]</h4>";
+                $sh .= "<h3>$useri[0] $useri[1]</h3>";
+                $sh .= "<h4>email: $useri[2]</h4>";
+                $sh .= "<h4>address: $useri[3]</h4>";
                 $sh .="</div>";
             echo $sh;
             
