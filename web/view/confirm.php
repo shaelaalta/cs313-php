@@ -28,12 +28,12 @@
         
         <main id="confirm">
             <?php
-            $sh = 'div id=show"'
+            $sh = 'div id=show"';
             foreach(userInfo as $useri){
-                $sh .= "<h2>Billing Info</h2>"
-                $sh .= "<h3>$clientFirstname $clientLastname</h3>";
-                $sh .= "<h4>email: $clientEmail</h4>";
-                $sh .= "<h4>address: $address</h4>";
+                $sh .= "<h2>Billing Info</h2>";
+                $sh .= "<h3>$useri[$clientFirstname] $useri[$clientLastname]</h3>";
+                $sh .= "<h4>email: $useri[$clientEmail]</h4>";
+                $sh .= "<h4>address: $useri[$address]</h4>";
             }
             ?>
             <?php
