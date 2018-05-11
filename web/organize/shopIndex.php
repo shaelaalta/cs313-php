@@ -76,14 +76,22 @@ switch ($action) {
     
     case 'remove':
         $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
+        $list = $_SESSION['cart'];
         $length = count($_SESSION['cart']);
         
-        for ($i = 0; $i < $length; $i++){
+        foreach($list as $lists){
+            if($lists[1] == $invName)
+            {
+                $_SESSION['count'] -= $lists[3];
+                break;
+            }
+        }
+        /*for ($i = 0; $i < $length; $i++){
                 if($_SESSION['cart'][$i][1] == $invName){
                     $_SESSION['count'] -= $_SESSION['cart'][$i][3];
                     break;
                 }
-        }
+        }*/
         
         $key = array_search($invName, $_SESSION['cart']);
         unset($_SESSION['cart'][$key]);
