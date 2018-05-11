@@ -39,9 +39,9 @@
                 <input type="hidden" name="invDesc" 
                        <?php 
                        $str = addslashes($invDesc);
-                       echo "value='$str'"; ?> >
-                <input type="hidden" name="invPrice" <?php echo "value='$invPrice'"; ?> >
-                <input type="hidden" name="invImg" <?php echo "value='$imagePlace'"; ?> >
+                       echo "value='$str'"; ?>>
+                <input type="hidden" name="invPrice" <?php echo "value='$invPrice'"; ?>>
+                <input type="hidden" name="invImg" <?php echo "value='$imagePlace'"; ?>>
             </form>
         </main>
         
