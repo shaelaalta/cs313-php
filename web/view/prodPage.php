@@ -29,19 +29,19 @@
         
         <main id="product">
             <?php 
-                $prod = "<img src='$imagePlace'><h1>$invName</h1><p>$invDesc</p><span>$". $invPrice . "</span>";
+                $prod = "<img src='$imagePlace'><h1>$invName</h1><p>$invDesc</p><span>$$invPrice</span>";
                 echo $prod;
             ?>
             
             <form id="addCart" action="/organize/shopIndex.php" method="post">
                 <button type="submit" name="action" value="addCart">Add to Cart</button>
-                <input type="hidden" name="invName" <?php echo "value='$invName'"; ?>>
+                <input type="hidden" name="invName" <?php echo "value='$invName'"; ?> >
                 <input type="hidden" name="invDesc" 
                        <?php 
                        $str = addslashes($invDesc);
-                       echo "value='$str'"; ?>>
-                <input type="hidden" name="invPrice" <?php echo "value='$invPrice'"; ?>>
-                <input type="hidden" name="invImg" <?php echo "value='$imagePlace'"; ?>>
+                       echo "value='$str'"; ?> >
+                <input type="hidden" name="invPrice" <?php echo "value='$invPrice'"; ?> >
+                <input type="hidden" name="invImg" <?php echo "value='$imagePlace'"; ?> >
             </form>
         </main>
         
