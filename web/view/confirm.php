@@ -29,14 +29,12 @@
         <main id="confirm">
             <?php
             $sh = 'div id=show"';
-            foreach($userInfo as $useri){
                 $sh .= "<h2>Billing Info</h2>";
                 $sh .= "<h3>$useri[$clientFirstname] $useri[$clientLastname]</h3>";
                 $sh .= "<h4>email: $useri[$clientEmail]</h4>";
                 $sh .= "<h4>address: $useri[$address]</h4>";
-            }
-            ?>
-            <?php
+            echo $sh;
+            
             $totalCost = 0;
             $pd = '<div id="cart">';
                 foreach($list as $lists){
@@ -44,7 +42,7 @@
                     $pd .= "<img src=" . $lists[0] . ">";
                     $pd .= "<h2>$lists[1]</h2><span>$$lists[2]</span><br><span>Amount: $lists[3]</span>";
                     $pd .= "<hr></div>";
-                    $totalCost += $list[2];
+                    $totalCost += ($list[2] * $list[3]);
                 }
             $pd .="</div>";
             echo $pd;
