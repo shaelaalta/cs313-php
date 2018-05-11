@@ -76,7 +76,8 @@ switch ($action) {
         
         for ($i = 0; $i < $length; $i++){
                 if($_SESSION['cart'][$i][1] == $invName){
-                    $_SESSION['count'] -= $_SESSION['cart'][$i][3];
+                    $amountC = $_SESSION['cart'][$i][3];
+                    $_SESSION['count'] -= $amountC;
                     break;
                 }
         }
