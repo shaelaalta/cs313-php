@@ -78,14 +78,17 @@ switch ($action) {
         $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
         $list = $_SESSION['cart'];
         $length = count($_SESSION['cart']);
+        $remAmount = 0;
         
         foreach($list as $lists){
             if($lists[1] == $invName)
             {
-                $_SESSION['count'] -= $lists[3];
+                $remAmount = $lists[3];
                 break;
             }
         }
+        
+        $_SESSION['count'] -= $remAmount;
         /*for ($i = 0; $i < $length; $i++){
                 if($_SESSION['cart'][$i][1] == $invName){
                     $_SESSION['count'] -= $_SESSION['cart'][$i][3];
