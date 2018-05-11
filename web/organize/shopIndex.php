@@ -109,13 +109,16 @@ switch ($action) {
                 exit; 
         }
         
-        array_push($_SESSION['user'], $clientFirstname, $clientLastname, $clientEmail, $address);
+        array_push($_SESSION['user'], $clientFirstname);
+        array_push($_SESSION['user'], $clientLastname);
+        array_push($_SESSION['user'], $clientEmail);
+        array_push($_SESSION['user'], $address);
         header("location: shopIndex.php?action=confirm");
         break;
         
     case 'confirm':
         $list = $_SESSION['cart'];
-        $userInfo = $_SESSION['user'];
+        $useri = $_SESSION['user'];
         include '../view/confirm.php';
         break;
         
