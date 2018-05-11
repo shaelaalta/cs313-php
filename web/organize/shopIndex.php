@@ -72,6 +72,13 @@ switch ($action) {
     
     case 'remove':
         $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
+        $length = count($_SESSION['cart']);
+        
+        for ($i = 0; $i < $length; $i++){
+                if($_SESSION['cart'][$i][1] == $invName){
+                    $_SESSION['count'] -= $_SESSION['cart'][$i][3];
+                    break;
+                }
         
         $key = array_search($invName, $_SESSION['cart']);
         $countOfItem = $key[3];
