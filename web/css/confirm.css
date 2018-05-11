@@ -1,0 +1,18 @@
+#confirm {
+    padding: 5vw;
+    font-size: 130%;
+}
+
+button{
+    clear: both;
+    font-size: 4vw;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: cadetblue;
+    color: white;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: gray;
+}

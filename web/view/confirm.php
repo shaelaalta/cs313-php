@@ -37,7 +37,7 @@
             echo $sh;
             
             $totalCost = 0;
-            $pd = '<div id="cart">';
+            $pd = '<h2>Order</h2><div id="cart">';
                 foreach($list as $lists){
                     $pd .= '<div id="item">';
                     $pd .= "<img src=" . $lists[0] . ">";

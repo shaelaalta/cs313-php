@@ -46,6 +46,7 @@
                 <input type="email" name="clientEmail" id="clientEmail"
                    <?php if(isset($clientEmail)){echo "value='$clientEmail'";} ?>
                    placeholder="Your email . . ." required>
+                <label for="address">Address:</label>
                 <input type="text" name="address" id="address" 
                        <?php if(isset($address)){echo "value='$address'";} ?>
                 placeholder = "Your address. . . "
