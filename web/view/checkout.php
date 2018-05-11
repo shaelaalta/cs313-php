@@ -50,7 +50,7 @@
                        <?php if(isset($address)){echo "value='$address'";} ?>
                 placeholder = "Your address. . . "
                 required>
-                <button type="submit" name="action" value="placeOrder">Place Order</button>
+                <button type="submit" name="action" value="checkout">Place Order</button>
             </form>
         </main>
 
