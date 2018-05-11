@@ -40,7 +40,7 @@
             echo $pd;
             ?>
             
-            <form id="wantCheckout" action="/organize/shopIndex.php" method="post"><button type="submit" name="action" value="openCheckout">Checkout</button>
+            <form id="wantCheckout" action="/organize/shopIndex.php" method="post"><button id="checkoutButton" type="submit" name="action" value="openCheckout">Checkout</button>
             </form>
         </main>
 
