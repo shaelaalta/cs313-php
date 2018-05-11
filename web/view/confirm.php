@@ -47,7 +47,7 @@
                 }
             $pd .="</div>";
             echo $pd;
-            echo "$". $totalCost;
+            echo "Total: $". $totalCost;
             ?>
             
             <form id="checkoutForm" action="/organize/shopIndex.php" method="post"><button type="submit" name="action" value="confirmed">Confirm</button>
