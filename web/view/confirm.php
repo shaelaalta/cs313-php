@@ -43,7 +43,7 @@
                     $pd .= "<img src=" . $lists[0] . ">";
                     $pd .= "<h2>$lists[1]</h2><span>$$lists[2]</span><br><span>Amount: $lists[3]</span>";
                     $pd .= "<hr></div>";
-                    $totalCost += ($list[2] * $list[3]);
+                    $totalCost += ($lists[2] * $lists[3]);
                 }
             $pd .="</div>";
             echo $pd;
