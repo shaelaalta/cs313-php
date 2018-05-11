@@ -37,7 +37,7 @@
       </header>
         
         <main>
-            <h1>Coming Soon!</h1>
+            <a href="/view/group3.html">Week 3 Group Work</a>
         </main>
         
     </body>
