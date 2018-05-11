@@ -28,6 +28,7 @@
         
         <main id="cart">
             <?php
+            echo $coundOfItem;
             $pd = '<div id="cart">';
                 foreach($list as $lists){
                     $pd .= '<div id="item">';
