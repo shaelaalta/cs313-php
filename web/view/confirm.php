@@ -29,7 +29,7 @@
         <main id="confirm">
             <?php
             $sh = 'div id=show"';
-            foreach(userInfo as $useri){
+            foreach($userInfo as $useri){
                 $sh .= "<h2>Billing Info</h2>";
                 $sh .= "<h3>$useri[$clientFirstname] $useri[$clientLastname]</h3>";
                 $sh .= "<h4>email: $useri[$clientEmail]</h4>";
