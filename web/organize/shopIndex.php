@@ -53,7 +53,7 @@ switch ($action) {
             }
         }
         
-        $invPrice = filter_input(INPUT_POST, 'invPrice', FILTER_SANITIZE_NUMBER_FLOAT);
+        $invPrice = filter_input(INPUT_POST, 'invPrice', FILTER_SANITIZE_STRING));
         $invImg = filter_input(INPUT_POST, 'invImg', FILTER_SANITIZE_STRING);
         $amountAdd = 1;
         $itemArray = array($invImg, $invName, $invPrice, $amountAdd);
