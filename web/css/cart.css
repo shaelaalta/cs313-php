@@ -23,22 +23,18 @@ button{
     padding: 5px;
     border-radius: 5px;
     margin-top: 20px;
+    clear: right;
 }
 
 button:hover {
     background-color: antiquewhite;
 }
 
-#wantCheckout {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #checkoutButton{
     clear: both;
     font-size: 4vw;
     padding: 12px;
+    margin-left: 5vw;
     border-radius: 5px;
     background-color: cadetblue;
     color: white;
