@@ -42,8 +42,8 @@
             
             <form id="wantCheckout" action="/organize/shopIndex.php" method="post">
                 <button id="checkoutButton" type="submit" name="action" value="openCheckout">Checkout</button>
-                <a href="shop.php"></a><button id="checkoutButton">Continue Shopping</button>
             </form>
+                <a href="shop.php"></a><button id="checkoutButton">Continue Shopping</button>
         </main>
 
     </body>
