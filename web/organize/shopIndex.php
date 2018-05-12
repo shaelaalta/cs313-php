@@ -107,6 +107,10 @@ switch ($action) {
         include '../view/checkout.php';
         break;
         
+    case 'keepShop':
+        include '../view/shop.php';
+        break;
+        
     case 'checkout':
         $clientFirstname = filter_input(INPUT_POST, 'clientFirstname', FILTER_SANITIZE_STRING);
         $clientLastname = filter_input(INPUT_POST, 'clientLastname', FILTER_SANITIZE_STRING);

@@ -29,6 +29,12 @@ button:hover {
     background-color: antiquewhite;
 }
 
+#wantCheckout {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #checkoutButton{
     clear: both;
     font-size: 4vw;
@@ -37,9 +43,8 @@ button:hover {
     background-color: cadetblue;
     color: white;
     margin-top: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 20px;
+    display: inline;
 }
 
 #checkoutButton:hover {
