@@ -2,7 +2,7 @@
     <div id=tipTop>
         <img id=logo src="/images/dotLogo.jpg">
         <div id='cartBlock'>
-            <a href="../organize/shopIndex.php?action=viewCart"><img id='shopCart' src="/images/babyCart.jpg"></a>
+            <a href="../shop/shopIndex.php?action=viewCart"><img id='shopCart' src="/images/babyCart.jpg"></a>
             <br><p>
             <?php
                 if(isset($_SESSION['count'])){
@@ -18,7 +18,7 @@
         <ul>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             <li><a href="../dot.php">Home</a></li>
-            <li><a href="/view/shop.php">Shop</a></li>
+            <li><a href="../shop/shopIndex.php?action=keepShop">Shop</a></li>
             <li><a href="">About</a></li>
             <li><a href="">Contact</a></li>
         </ul>
