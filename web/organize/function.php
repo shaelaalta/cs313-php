@@ -1,8 +1,4 @@
-function buildProductsDisplay($products){
-    $pd;
-}
-
-/***************************************************
+***************************************************
  * builds product display list of certain category
  ***************************************************/
 function buildProductsDisplay($products)
