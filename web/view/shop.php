@@ -60,8 +60,6 @@ $dbUser = $dbopts["user"];
 $dbPassword = $dbopts["pass"];
 $dbName = ltrim($dbopts["path"],'/');
 
-print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
-
 try {
  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 }
@@ -70,10 +68,20 @@ catch (PDOException $ex) {
  die();
 }
 
-foreach ($db->query('SELECT invId, invName, invPrice FROM inventory') as $row)
-{
- print "<p>$row[0]</p>\n\n";
-}
+$products = $db->query('SELECT invId, invName, invPrice FROM inventory');
+            
+ $pd = '<div id="group">';
+    foreach ($products as $product) {
+        $pd .= '<div id="item">';
+        $pd .= "<a href='/shop/index.php?action=showItem&invId=$product[invId]'>";     
+        $pd .= "<img src='$product[invImage]' alt='Image of $product[invName]'></a>";
+        $pd .= '<hr>';
+        $pd .= "<h2>$product[invName]</h2>";
+        $pd .= "<span>$$product[invPrice]</span>";
+        $pd .= '</div>';
+    }
+    $pd .= '</div>';
+    echo $pd;
             ?>
         </main>
         
