@@ -12,7 +12,7 @@ function connect()
     {
         $user= 'aaxshfcnahrbwi';
         $password = 'ff8800c7b186b1134b1b5059e5306d47926abf3599e6fba861d9a10555cc0ecc';
-        $db = new PDO('pgsql:host=67.60.89.156;dbname=dbilarss332cbp', $user, $password);
+        $db = new PDO('pgsql:host=127.0.0.1;dbname=postgresql-concentric-96803', $user, $password);
         return $db;
     }
     catch (PDOException $ex)
