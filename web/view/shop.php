@@ -40,7 +40,7 @@
                 <h2>Play Gym</h2><span>$63.23</span>
             </div>
             </div>-->
-            <?php echo $prodDisplay; ?>
+            <?php echo $prodList; ?>
         </main>
         
     </body>
