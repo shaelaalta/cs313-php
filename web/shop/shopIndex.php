@@ -2,6 +2,10 @@
 /* shop organizer*/
 session_start();
 
+require_once '../organize/connection.php';
+require_once '../organize/function.php';
+require_once '../model/shop-model.php';
+
 if(!isset($_SESSION['cart'])){
    $_SESSION['cart'] = array();
 }
@@ -20,6 +24,9 @@ if ($action == NULL){
 }
 
 switch ($action) {
+    case 'showItem':
+        break;
+        
     case 'straight':
         $imagePlace = "/images/straightGym.jpg";
         $invName = "Straight Gym";
@@ -108,6 +115,8 @@ switch ($action) {
         break;
         
     case 'keepShop':
+        $prodList = getProducts();
+        $prodDisplay = buildProductsDisplay($prodList);
         include '../view/shop.php';
         break;
         

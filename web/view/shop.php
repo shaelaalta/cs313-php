@@ -28,7 +28,7 @@
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; ?>
         
         <main id="shop">
-            <div id="group">
+            <!--<div id="group">
             <div id="item">
                 <a href="/organize/shopIndex.php?action=straight"><img src="/images/straightGym.jpg" alt="image of the straight gym"></a>
                 <hr>
@@ -39,7 +39,8 @@
                 <hr>
                 <h2>Play Gym</h2><span>$63.23</span>
             </div>
-            </div>
+            </div>-->
+            <?php echo $prodDisplay; ?>
         </main>
         
     </body>
