@@ -74,6 +74,13 @@ $sql = 'SELECT invId, invName, invPrice FROM inventory';
     $stmt->execute();
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo $products;
+            $me = "";
+            foreach($products as $product){
+                $me .= $product[invName];
+                $me .= $product[0];
+            }
+    echo $me;
+            
  $pd = '<div id="group">';
     foreach ($products as $product) {
         $pd .= '<div id="item">';
