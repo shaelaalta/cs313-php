@@ -77,8 +77,8 @@ $sql = 'SELECT invId, invName, invPrice FROM inventory';
  $pd = '<div id="group">';
     foreach ($products as $product) {
         $pd .= '<div id="item">';
-        $pd .= "<a href='/shop/index.php?action=showItem&invId=$product[invId]'>";     
-        $pd .= "<img src='$product[invImage]' alt='Image of $product[invName]'></a>";
+        $pd .= "<a href='/shop/index.php?action=showItem&invId='" .$product[invId] ."'>";     
+        $pd .= "<img src='" .$product[invImage] ."' alt='Image of $product[invName]'></a>";
         $pd .= '<hr>';
         $pd .= "<h2>$product[invName]</h2>";
         $pd .= "<span>$$product[invPrice]</span>";
