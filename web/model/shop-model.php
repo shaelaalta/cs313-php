@@ -1,7 +1,7 @@
 <?php
 
 function getProducts(){
-    $db = connection();
+    $db = connect();
     $sql = 'SELECT invId, invName, invPrice FROM inventory ORDER BY invName ASC';
     $stmt = $db->prepare($sql);
     $stmt->execute();
