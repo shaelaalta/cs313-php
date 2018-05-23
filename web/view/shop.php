@@ -70,7 +70,7 @@ $sql = 'SELECT invId, invName, invPrice FROM inventory';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    print_r $products;
+    print_r($products);
             $me = "";
             foreach($products as $product){
                 $me .= $product[invName];
