@@ -66,7 +66,7 @@ catch (PDOException $ex) {
 }
 
 //$products = $db->query('SELECT invId, invName, invPrice FROM inventory');
-$sql = 'SELECT invId, invName, invPrice, invImage FROM inventory';
+$sql = 'SELECT invId, invName, invPrice, invImg FROM inventory';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -76,7 +76,7 @@ $sql = 'SELECT invId, invName, invPrice, invImage FROM inventory';
     foreach ($products as $product) {
         $pd .= '<div id="item">';
         $pd .= "<a href='/shop/index.php?action=showItem&invId=$product[invid]'>";     
-        $pd .= "<img src='$product[invimage]' alt='Image of $product[invname]'></a>";
+        $pd .= "<img src='$product[invimg]' alt='Image of $product[invname]'></a>";
         $pd .= '<hr>';
         $pd .= "<h2>$product[invname]</h2>";
         $pd .= "<span>$$product[invprice]</span>";
