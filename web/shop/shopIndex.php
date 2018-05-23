@@ -117,7 +117,6 @@ switch ($action) {
     case 'keepShop':
         //$prodList = getProducts();
         //$prodDisplay = buildProductsDisplay($prodList);
-        $prodDisplay = getProducts();
         include '../view/shop.php';
         break;
         
