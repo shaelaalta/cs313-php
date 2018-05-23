@@ -8,11 +8,11 @@ function buildProductsDisplay($products)
     $pd = '<div id="group">';
     foreach ($products as $product) {
         $pd .= '<div id="item">';
-        $pd .= "<a href='/shop/index.php?action=showItem&invId=$product[invId]'>";     
-        $pd .= "<img src='$product[invImage]' alt='Image of $product[invName]'></a>";
+        $pd .= "<a href='/shop/index.php?action=showItem&invId=$product[invid]'>";     
+        $pd .= "<img src='$product[invimg]' alt='Image of $product[invname]'></a>";
         $pd .= '<hr>';
-        $pd .= "<h2>$product[invName]</h2>";
-        $pd .= "<span>$$product[invPrice]</span>";
+        $pd .= "<h2>$product[invname]</h2>";
+        $pd .= "<span>$$product[invprice]</span>";
         $pd .= '</div>';
     }
     $pd .= '</div>';

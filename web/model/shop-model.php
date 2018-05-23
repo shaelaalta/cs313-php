@@ -2,11 +2,9 @@
 
 function getProducts(){
     $db = connect();
-    $sql = 'SELECT invId, invName, invPrice FROM inventory';
+    $sql = 'SELECT invId, invName, invPrice, invImg FROM inventory';
     $stmt = $db->prepare($sql);
-    //$stmt = $db->query($sql);
     $stmt->execute();
-    $prodList = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    //$stmt->closeCursor();
-    return $prodList;
+    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $products;
 }
