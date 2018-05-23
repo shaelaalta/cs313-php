@@ -66,7 +66,7 @@ catch (PDOException $ex) {
 }
 
 //$products = $db->query('SELECT invId, invName, invPrice FROM inventory');
-$sql = 'SELECT invId, invName, invPrice FROM inventory';
+$sql = 'SELECT invId, invName, invPrice, invImage FROM inventory';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
