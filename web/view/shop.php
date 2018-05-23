@@ -72,11 +72,8 @@ $sql = 'SELECT invId, invName, invPrice FROM inventory';
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     print_r($products);
             $me = "";
-            /*foreach($products as $product){
-                $me .= $product[invName];
-                $me .= $product[0];
-            }*/
-    for($i = 0; $i < $products.length(); $i++){
+            $i = 0;
+    for($i; $i < $products.length(); $i++){
         $me .= $products[i][invName];
         $me .= $products[i][invPrice];
         $me .= "<br>";
