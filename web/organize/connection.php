@@ -1,10 +1,6 @@
 <?php
 /* 
  * Database Connections
- * PDO Attempt, wish me luck
- * Shaela Sutton
- *host=67.60.89.156
- * host=ec2-23-23-130-158.compute-1.amazonaws.com
  */
 function connect(){
     $dbUrl = getenv('DATABASE_URL');
@@ -31,5 +27,4 @@ function connect(){
         print "<p>error: $ex->getMessage() </p>\n\n";
         die();
     }
-
 }

@@ -28,9 +28,9 @@
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; ?>
         
         <main id="shop">
-            <?
-            //php echo $prodDisplay; 
-            $dbUrl = getenv('DATABASE_URL');
+            <?php 
+            echo $prodDisplay; 
+            /*$dbUrl = getenv('DATABASE_URL');
 
 if (empty($dbUrl)) {
  $dbUrl = "postgres://aaxshfcnahrbwi:ff8800c7b186b1134b1b5059e5306d47926abf3599e6fba861d9a10555cc0ecc@ec2-23-23-130-158.compute-1.amazonaws.com:5432/dbilarss332cbp";
@@ -52,16 +52,14 @@ try {
 catch (PDOException $ex) {
  print "<p>error: $ex->getMessage() </p>\n\n";
  die();
-}
-
-//$products = $db->query('SELECT invId, invName, invPrice FROM inventory');
-$sql = 'SELECT invId, invName, invPrice, invImg FROM inventory';
+}*/
+/*$sql = 'SELECT invId, invName, invPrice, invImg FROM inventory';
     $stmt = $db->prepare($sql);
     $stmt->execute();
-    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    print_r($products);
+    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
+    //print_r($products);
             
- $pd = '<div id="group">';
+ /*$pd = '<div id="group">';
     foreach ($products as $product) {
         $pd .= '<div id="item">';
         $pd .= "<a href='/shop/index.php?action=showItem&invId=$product[invid]'>";     
@@ -72,7 +70,7 @@ $sql = 'SELECT invId, invName, invPrice, invImg FROM inventory';
         $pd .= '</div>';
     }
     $pd .= '</div>';
-    echo $pd;
+    echo $pd;*/
             ?>
         </main>
         
