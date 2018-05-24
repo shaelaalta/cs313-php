@@ -55,7 +55,7 @@ catch (PDOException $ex) {
 $sql = 'SELECT invId, invName, invPrice, invImg FROM inventory';
     $stmt = $db->prepare($sql);
     $stmt->execute();
-    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
+    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     //print_r($products);
             
  $pd = '<div id="group">';
