@@ -58,8 +58,9 @@
             
             $prod = "<img src='$products[invimg]'><h1>$products[invname]</h1><p>$products[invdesc]</p><span>$$products[invprice]</span>";
             echo $prod;
+            echo $products[invname];
+            echo $products[invprice];
             ?>
-            <?php print_r($products); ?>
             <form id="addCart" action="/organize/shopIndex.php" method="post">
                 <button type="submit" name="action" value="addCart">Add to Cart</button>
                 <input type="hidden" name="invName" <?php echo "value='$products[invname]'"; ?> >
