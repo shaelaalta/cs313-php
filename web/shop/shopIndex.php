@@ -2,8 +2,8 @@
 /* shop organizer*/
 session_start();
 
-require_once '../organize/connection.php';
-require_once '../organize/function.php';
+//require_once '../organize/connection.php';
+//require_once '../organize/function.php';
 require_once '../model/shop-model.php';
 
 if(!isset($_SESSION['cart'])){
@@ -14,7 +14,7 @@ if(!isset($_SESSION['count'])){
     $_SESSION['count'] = 0;
 }
 
-if(!isset($_SESSION['user'])){
+if(!isset($_SESSI ON['user'])){
     $_SESSION['user'] = array();
 }
 
@@ -115,8 +115,9 @@ switch ($action) {
         break;
         
     case 'keepShop':
-        $prodList = getProducts();
-        $prodDisplay = buildProductsDisplay($prodList);
+        //$prodList = getProducts();
+        //$prodDisplay = buildProductsDisplay($prodList);
+        $prodDisplay = getProducts();
         include '../view/shop.php';
         break;
         
