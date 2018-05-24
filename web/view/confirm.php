@@ -50,7 +50,7 @@
             echo "Total: $". $totalCost;
             ?>
             
-            <form id="checkoutForm" action="/organize/shopIndex.php" method="post"><button type="submit" name="action" value="confirmed">Confirm</button>
+            <form id="checkoutForm" action="/shop/shopIndex.php" method="post"><button type="submit" name="action" value="confirmed">Confirm</button>
             <button type="submit" name="action" value="cancel">Cancel</button>
             </form>
         </main>

@@ -31,7 +31,7 @@
             echo $message;
             ?>
             
-            <form id="checkoutForm" action="/organize/shopIndex.php" method="post">
+            <form id="checkoutForm" action="/shop/shopIndex.php" method="post">
                 <label for="clientFirstname">First Name:</label>
                 <input type="text" name="clientFirstname" id="clientFirstname"
                    <?php if(isset($clientFirstname)){echo "value='$clientFirstname'";} ?>
