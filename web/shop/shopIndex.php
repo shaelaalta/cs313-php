@@ -2,9 +2,9 @@
 /* shop organizer*/
 session_start();
 
-require_once '../organize/connection.php';
-require_once '../organize/function.php';
-require_once 'model/shop-model.php';
+//require_once '../organize/connection.php';
+//require_once '../organize/function.php';
+//require_once 'model/shop-model.php';
 
 if(!isset($_SESSION['cart'])){
    $_SESSION['cart'] = array();
