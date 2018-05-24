@@ -54,12 +54,13 @@
             $stmt = $db->prepare($sql);
             $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
             $stmt->execute();
-            $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $products = $stmt->fetch(PDO::FETCH_ASSOC);
             
-            $prod = "";
+            /*$prod = "";
             foreach($products as $product){
             $prod .= "<img src='$product[invimg]'><h1>$product[invname]</h1><p>$product[invdesc]</p><span>$$product[invprice]</span>";
-            }
+            }*/
+            $prod = "<img src='$product[invimg]'><h1>$product[invname]</h1><p>$product[invdesc]</p><span>$$product[invprice]</span>";
             echo $prod;
             ?>
             <form id="addCart" action="/organize/shopIndex.php" method="post">
