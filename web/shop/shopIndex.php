@@ -26,9 +26,6 @@ if ($action == NULL){
 
 switch ($action) {
     case 'showItem':
-        break;
-    
-    case 'showItem':
         $invId = filter_input(INPUT_GET, 'invId', FILTER_SANITIZE_NUMBER_INT);
         include '../view/prodPage.php';
         break;
