@@ -33,7 +33,7 @@ switch ($action) {
         include '../view/prodPage.php';
         break;
         
-    case 'straight':
+    /*case 'straight':
         $imagePlace = "/images/straightGym.jpg";
         $invName = "Straight Gym";
         $invDesc = "This baby gym with it's straight lines give it a modern, clean feel that will add to the feel of your home with it's warm wood texture.";
@@ -47,7 +47,7 @@ switch ($action) {
         $invDesc = "This baby gym with it's curves gives it a sleek, modern look that will add to your home with it's warm wood texture.";
         $invPrice = 63.23;
         include '../view/prodPage.php';
-        break;
+        break;*/
         
     case 'addCart':
         $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);

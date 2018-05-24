@@ -70,9 +70,9 @@
                 <input type="hidden" name="invDesc" 
                        <?php 
                        $str = addslashes($products[invdesc]);
-                       echo "value='$str'"; ?>>
-                <input type="hidden" name="invPrice" <?php echo "value='$products[invprice]'"; ?>>
-                <input type="hidden" name="invImg" <?php echo "value='$products[invimg]'"; ?>>
+                       echo "value='$str'"; ?> >
+                <input type="hidden" name="invPrice" <?php echo "value='$products[invprice]'"; ?> >
+                <input type="hidden" name="invImg" <?php echo "value='$products[invimg]'"; ?> >
             </form>
 
         </main>
