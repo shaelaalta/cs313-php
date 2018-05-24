@@ -56,10 +56,11 @@
             $stmt->execute();
             $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
-            $prod = "<img src='$products[invimg]'><h1>$products[invname]</h1><p>$products[invdesc]</p><span>$$products[invprice]</span>";
+            $prod = "";
+            foreach($products as $product){
+            $prod .= "<img src='$product[invimg]'><h1>$product[invname]</h1><p>$product[invdesc]</p><span>$$product[invprice]</span>";
+            }
             echo $prod;
-            echo $products[invname];
-            echo $products[invprice];
             ?>
             <form id="addCart" action="/organize/shopIndex.php" method="post">
                 <button type="submit" name="action" value="addCart">Add to Cart</button>
