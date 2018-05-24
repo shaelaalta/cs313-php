@@ -60,7 +60,7 @@
             foreach($products as $product){
             $prod .= "<img src='$product[invimg]'><h1>$product[invname]</h1><p>$product[invdesc]</p><span>$$product[invprice]</span>";
             }*/
-            $prod = "<img src='$product[invimg]'><h1>$product[invname]</h1><p>$product[invdesc]</p><span>$$product[invprice]</span>";
+            $prod = "<img src='$products[invimg]'><h1>$products[invname]</h1><p>$products[invdesc]</p><span>$$products[invprice]</span>";
             echo $prod;
             ?>
             <form id="addCart" action="/organize/shopIndex.php" method="post">
