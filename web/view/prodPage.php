@@ -28,21 +28,52 @@
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; ?>
         
         <main id="product">
-            <?php 
-                $prod = "<img src='$imagePlace'><h1>$invName</h1><p>$invDesc</p><span>$$invPrice</span>";
+            <?php
+            $dbUrl = getenv('DATABASE_URL');
+
+            if (empty($dbUrl)) {
+                $dbUrl = "postgres://aaxshfcnahrbwi:ff8800c7b186b1134b1b5059e5306d47926abf3599e6fba861d9a10555cc0ecc@ec2-23-23-130-158.compute-1.amazonaws.com:5432/dbilarss332cbp";
+            }
+
+            $dbopts = parse_url($dbUrl);
+
+            $dbHost = $dbopts["host"];
+            $dbPort = $dbopts["port"];
+            $dbUser = $dbopts["user"];
+            $dbPassword = $dbopts["pass"];
+            $dbName = ltrim($dbopts["path"],'/');
+
+            try {
+                $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+            }
+            catch (PDOException $ex) {
+                print "<p>error: $ex->getMessage() </p>\n\n";
+                die();
+            }
+            $sql = 'SELECT * FROM inventory WHERE invid = :invId';
+            $stmt = $db->prepare($sql);
+            $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
+            $stmt->execute();
+            $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        //print_r($products);
+            
+                $prod = "<img src='$products[invimg]'><h1>$products[invname]</h1><p>$products[invdesc]</p><span>$$products[invprice]</span>";
                 echo $prod;
+            ?>
+            
+            <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; ?>
             ?>
             
             <form id="addCart" action="/organize/shopIndex.php" method="post">
                 <button type="submit" name="action" value="addCart">Add to Cart</button>
-                <input type="hidden" name="invName" <?php echo "value='$invName'"; ?> >
+                <input type="hidden" name="invName" <?php echo "value='$products[invname]'"; ?> >
                 <input type="hidden" name="invDesc" 
                        <?php 
-                       $str = addslashes($invDesc);
+                       $str = addslashes($products[invdesc]);
                        echo "value='$str'"; ?>>
-                <input type="hidden" name="invPrice" <?php echo "value='$invPrice'"; ?>>
-                <input type="hidden" name="invImg" <?php echo "value='$imagePlace'"; ?>>
-            </form>
+                <input type="hidden" name="invPrice" <?php echo "value='$products[invprice]'"; ?>>
+                <input type="hidden" name="invImg" <?php echo "value='$products[invimg]'
+
         </main>
         
     </body>
