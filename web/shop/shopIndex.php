@@ -2,7 +2,7 @@
 /* shop organizer*/
 session_start();
 
-//require_once '../organize/connection.php';
+require_once '../organize/connection.php';
 //require_once '../organize/function.php';
 //require_once '../../model/shop-model.php';
 //require_once $_SERVER['DOCUMENT_ROOT'] . '/model/shop-model.php';
@@ -118,7 +118,7 @@ switch ($action) {
     case 'keepShop':
         //$prodList = getProducts();
         //$prodDisplay = buildProductsDisplay($prodList);
-        $prodDisplay = getProducts();
+        //$prodDisplay = getProducts();
         include '../view/shop.php';
         break;
         
