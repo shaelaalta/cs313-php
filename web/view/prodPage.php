@@ -55,13 +55,10 @@
             $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
             $stmt->execute();
             $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        //print_r($products);
+            print_r($products);
             
-                $prod = "<img src='$products[invimg]'><h1>$products[invname]</h1><p>$products[invdesc]</p><span>$$products[invprice]</span>";
-                echo $prod;
-            ?>
-            
-            <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; ?>
+            $prod = "<img src='$products[invimg]'><h1>$products[invname]</h1><p>$products[invdesc]</p><span>$$products[invprice]</span>";
+            echo $prod;
             ?>
             
             <form id="addCart" action="/organize/shopIndex.php" method="post">
