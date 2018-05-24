@@ -15,7 +15,7 @@ if(!isset($_SESSION['count'])){
     $_SESSION['count'] = 0;
 }
 
-if(!isset($_SESSI ON['user'])){
+if(!isset($_SESSION['user'])){
     $_SESSION['user'] = array();
 }
 
