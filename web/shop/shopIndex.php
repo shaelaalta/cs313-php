@@ -2,8 +2,9 @@
 /* shop organizer*/
 session_start();
 
-//require_once '../organize/connection.php';
+require_once '../organize/connection.php';
 require_once '../organize/function.php';
+require_once '../model/shop-model.php';
 //$path = $_SERVER['DOCUMENT_ROOT'] . '/organize/function.php';
 //require_once($path);
 //require_once '../../model/shop-model.php';
@@ -106,10 +107,8 @@ switch ($action) {
         break;
         
     case 'keepShop':
-        //$prodList = getProducts();
-        //$prodDisplay = buildProductsDisplay($prodList);
-        //$prodDisplay = getProducts();
-        $prodDisplay = partyTime();
+        $prodList = getProducts();
+        $prodDisplay = buildProductsDisplay($prodList);
         include '../view/shop.php';
         break;
         

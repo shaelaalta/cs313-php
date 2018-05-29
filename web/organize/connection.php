@@ -21,10 +21,11 @@ function connect(){
 
     try {
         $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-        return $db;
     }
     catch (PDOException $ex) {
         print "<p>error: $ex->getMessage() </p>\n\n";
         die();
     }
+    
+    return $db;
 }

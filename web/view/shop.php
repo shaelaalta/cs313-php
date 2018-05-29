@@ -29,8 +29,7 @@
         
         <main id="shop">
             <?php
-            echo $prodDisplay;
-            $dbUrl = getenv('DATABASE_URL');
+            /*$dbUrl = getenv('DATABASE_URL');
 
             if (empty($dbUrl)) {
                 $dbUrl = "postgres://aaxshfcnahrbwi:ff8800c7b186b1134b1b5059e5306d47926abf3599e6fba861d9a10555cc0ecc@ec2-23-23-130-158.compute-1.amazonaws.com:5432/dbilarss332cbp";
@@ -68,7 +67,8 @@
                 $pd .= '</div>';
             }
             $pd .= '</div>';
-            echo $pd;
+            echo $pd;*/
+            echo $prodDisplay;
             ?>
         </main>
         
