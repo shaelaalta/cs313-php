@@ -57,13 +57,13 @@
             $getIt->bindValue(':email', $clientE, PDO::PARAM_STR);
             $getIt->execute();
             $matchEmail = $getIt->fetch(PDO::FETCH_ASSOC);
-            //$getIt->closeCursor();
+            $getIt->closeCursor();
             (if(empty($matchEmail))){
                 $showAll = 0;
             }
-            else if($matchEmail[clientpass] != $clientP){
+            /*else if($matchEmail[clientpass] != $clientP){
                 $showAll = 0;
-            }
+            }*/
             
             if($showAll != 0){
             /*$sql = 'SELECT * FROM inventory';
