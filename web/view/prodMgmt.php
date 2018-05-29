@@ -66,7 +66,7 @@
             }
             
             if($showAll != 0){
-            $sql = 'SELECT * FROM inventory';
+            /*$sql = 'SELECT * FROM inventory';
             $stmt = $db->prepare($sql);
             $stmt->execute();
             $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -83,6 +83,8 @@
             }
             $pd .= '</div>';
             echo $pd;
+            }*/
+            echo "party city";
             }
             else{
                 header("location: /shop/shopIndex.php?action=keepShop");
