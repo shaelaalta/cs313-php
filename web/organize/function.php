@@ -18,8 +18,3 @@ function buildProductsDisplay($products)
     $pd .= '</div>';
     return $pd;
 }
-
-/*function partyTime(){
-    $pd = "there's a party going on right here... a celebration we have but once a year";
-    return $pd;
-}*/

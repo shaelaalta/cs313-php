@@ -5,10 +5,6 @@ session_start();
 require_once '../organize/connection.php';
 require_once '../organize/function.php';
 require_once '../model/shop-model.php';
-//$path = $_SERVER['DOCUMENT_ROOT'] . '/organize/function.php';
-//require_once($path);
-//require_once '../../model/shop-model.php';
-//require_once $_SERVER['DOCUMENT_ROOT'] . '/model/shop-model.php';
 
 if(!isset($_SESSION['cart'])){
    $_SESSION['cart'] = array();
@@ -30,6 +26,7 @@ if ($action == NULL){
 switch ($action) {
     case 'showItem':
         $invId = filter_input(INPUT_GET, 'invId', FILTER_SANITIZE_NUMBER_INT);
+        $products = getUnoProduct($invId);
         include '../view/prodPage.php';
         break;
         
