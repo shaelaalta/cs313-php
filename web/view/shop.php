@@ -50,6 +50,7 @@ catch (PDOException $ex) {
  print "<p>error: $ex->getMessage() </p>\n\n";
  die();
 }
+            
 $sql = 'SELECT * FROM inventory';
     $stmt = $db->prepare($sql);
     $stmt->execute();
