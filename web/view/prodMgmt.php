@@ -61,9 +61,9 @@
             if(empty($matchEmail)){
                 $showAll = 0;
             }
-            /*else if($matchEmail[clientpass] != $clientP){
+            else if($matchEmail[clientpass] != $clientP){
                 $showAll = 0;
-            }*/
+            }
             
             if($showAll != 0){
             $sql = 'SELECT * FROM inventory';
@@ -83,7 +83,6 @@
             }
             $pd .= '</div>';
             echo $pd;
-            }
             }
             else{
                 header("location: /shop/shopIndex.php?action=keepShop");
