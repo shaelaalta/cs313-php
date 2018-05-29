@@ -37,8 +37,8 @@
                            <?php if(isset($clientE)){echo "value='$clientE'";} ?>
                            placeholder="Your email . . ." required>
                 </label>
-                <label for="password">
-                    <input type="text" name="cleintP" id="clientP"
+                <label for="clientP">
+                    <input type="text" name="clientP" id="clientP"
                            <?php if(isset($clientP)){echo "value='$clientP'";} ?>
                            placeholder="Your password . . ." required>
                 </label>
