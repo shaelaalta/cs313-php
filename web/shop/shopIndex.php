@@ -154,6 +154,11 @@ switch ($action) {
         }
         include '../view/prodMgmt.php';
         break;
+    
+    case 'editItem':
+        $invId = filter_input(INPUT_GET, 'invId', FILTER_SANITIZE_NUMBER_INT);
+        include '../view/editItem.php';
+        break;
         
     default:
         include '../dot.php';

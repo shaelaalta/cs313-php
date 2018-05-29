@@ -9,7 +9,7 @@
     <meta name="author" content="Shaela Sutton">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/css/home.css" type="text/css" rel="stylesheet"/>
-    <link href="/css/shop.css" type="text/css" rel="stylesheet"/>
+    <link href="/css/prod.css" type="text/css" rel="stylesheet"/>
 </head>
     <body>
         
@@ -27,10 +27,8 @@
         
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; ?>
         
-        <main id="shop">
-            <h2>Click to Edit Any Item</h2>
+        <main id="product">
             <?php
-            $showAll = 1;
             $dbUrl = getenv('DATABASE_URL');
 
             if (empty($dbUrl)) {
@@ -52,43 +50,30 @@
                 print "<p>error: $ex->getMessage() </p>\n\n";
                 die();
             }
-            
-            $check = 'SELECT clientemail, clientpass FROM client WHERE clientemail = :email';
-            $getIt = $db->prepare($check);
-            $getIt->bindValue(':email', $clientE, PDO::PARAM_STR);
-            $getIt->execute();
-            $matchEmail = $getIt->fetch(PDO::FETCH_ASSOC);
-            $getIt->closeCursor();
-            if(empty($matchEmail)){
-                $showAll = 0;
-            }
-            else if($matchEmail[clientpass] != $clientP){
-                $showAll = 0;
-            }
-            
-            if($showAll != 0){
-            $sql = 'SELECT * FROM inventory';
+            $sql = 'SELECT * FROM inventory WHERE invid = :invId';
             $stmt = $db->prepare($sql);
+            $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
             $stmt->execute();
-            $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $products = $stmt->fetch(PDO::FETCH_ASSOC);
             
-            $pd = '<div id="group">';
-            foreach ($products as $product) {
-                $pd .= '<div id="item">';
-                $pd .= "<a href='/shop/shopIndex.php?action=editItem&invId=$product[invid]'>";     
-                $pd .= "<img src='$product[invimg]' alt='Image of $product[invname]'></a>";
-                $pd .= '<hr>';
-                $pd .= "<h2>$product[invname]</h2>";
-                $pd .= "<span>$$product[invprice]</span>";
-                $pd .= '</div>';
-            }
-            $pd .= '</div>';
-            echo $pd;
-            }
-            else{
-                header("location: /shop/shopIndex.php?action=keepShop");
-            }
+            /*$prod = "";
+            foreach($products as $product){
+            $prod .= "<img src='$product[invimg]'><h1>$product[invname]</h1><p>$product[invdesc]</p><span>$$product[invprice]</span>";
+            }*/
+            $prod = "<img src='$products[invimg]'><h1>$products[invname]</h1><p>$products[invdesc]</p><span>$$products[invprice]</span>";
+            echo $prod;
             ?>
+            <form id="addCart" action="/shop/shopIndex.php" method="post">
+                <button type="submit" name="action" value="addCart">Add to Cart</button>
+                <input type="hidden" name="invName" <?php echo "value='$products[invname]'"; ?> >
+                <input type="hidden" name="invDesc" 
+                       <?php 
+                       $str = addslashes($products[invdesc]);
+                       echo "value='$str'"; ?> >
+                <input type="hidden" name="invPrice" <?php echo "value='$products[invprice]'"; ?> >
+                <input type="hidden" name="invImg" <?php echo "value='$products[invimg]'"; ?> >
+            </form>
+
         </main>
         
     </body>
