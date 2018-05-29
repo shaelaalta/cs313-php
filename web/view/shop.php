@@ -56,7 +56,7 @@ $sql = 'SELECT * FROM inventory';
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     //print_r($products);
             
- $pd = '<h1>' .$prodDisplay .'<div id="group">';
+ $pd = '<h1>' .$prodDisplay .'</h1><div id="group">';
     foreach ($products as $product) {
         $pd .= '<div id="item">';
         $pd .= "<a href='/shop/shopIndex.php?action=showItem&invId=$product[invid]'>";     
