@@ -29,6 +29,7 @@
         
         <main id="shop">
             <?php
+            echo $prodDisplay;
             $dbUrl = getenv('DATABASE_URL');
 
 if (empty($dbUrl)) {

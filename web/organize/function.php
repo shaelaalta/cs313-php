@@ -3,7 +3,7 @@
 ***************************************************
  * builds product display list of certain category
  ***************************************************/
-function buildProductsDisplay($products)
+/*function buildProductsDisplay($products)
 {
     $pd = '<div id="group">';
     foreach ($products as $product) {
@@ -17,4 +17,7 @@ function buildProductsDisplay($products)
     }
     $pd .= '</div>';
     return $pd;
+}*/
+function showParty(){
+    return "Party Time Central Now!!!!";
 }
