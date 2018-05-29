@@ -31,22 +31,6 @@ switch ($action) {
         include '../view/prodPage.php';
         break;
         
-    /*case 'straight':
-        $imagePlace = "/images/straightGym.jpg";
-        $invName = "Straight Gym";
-        $invDesc = "This baby gym with it's straight lines give it a modern, clean feel that will add to the feel of your home with it's warm wood texture.";
-        $invPrice = 57.45;
-        include '../view/prodPage.php';
-        break;
-    
-    case 'curve':
-        $imagePlace = "/images/curveGym.jpg";
-        $invName = "Curved Gym";
-        $invDesc = "This baby gym with it's curves gives it a sleek, modern look that will add to your home with it's warm wood texture.";
-        $invPrice = 63.23;
-        include '../view/prodPage.php';
-        break;*/
-        
     case 'addCart':
         $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
         
@@ -90,6 +74,7 @@ switch ($action) {
         $list = $_SESSION['cart'];
         $length = count($_SESSION['cart']);
         $remAmount = 0;
+        $finAmount = $_SESSION['count'];
         
         foreach($list as $lists){
             if($lists[1] == $invName)
@@ -98,8 +83,8 @@ switch ($action) {
                 break;
             }
         }
-        
-        $_SESSION['count'] -= $remAmount;
+        $finAmount -= $remAmount;
+        $_SESSION['count'] = $finAmount;
         /*for ($i = 0; $i < $length; $i++){
                 if($_SESSION['cart'][$i][1] == $invName){
                     $_SESSION['count'] -= $_SESSION['cart'][$i][3];
