@@ -144,18 +144,24 @@ switch ($action) {
     case 'adminLogin':
         $clientE = filter_input(INPUT_POST, 'clientE', FILTER_SANITIZE_EMAIL);
         $clientP = filter_input(INPUT_POST, 'clientP', FILTER_SANITIZE_STRING);
+        
         if(empty($clientE) || empty($clientP)){
             $message = "<p class='notice'>Please provide ALL information</p>";
             include '../view/admin.php';
             break;
         }
+        
         $showAll = checkEmailNPass($clientE, $clientP);
-        if(empty($showAll)){
+        if($showAll != 1){
             $message = "<p class='notice'>This information is invalid</p>";
             include '../view/admin.php';
             break;
         }
+        
+        $prodList = getProducts();
+        $prodDisplay = buildEditProdsDisplay($prodList);
         include '../view/prodMgmt.php';
+        
         break;
     
     case 'editItem':

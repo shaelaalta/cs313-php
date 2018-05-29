@@ -18,3 +18,22 @@ function buildProductsDisplay($products)
     $pd .= '</div>';
     return $pd;
 }
+
+/***************************************************
+ * builds product display list for the admin edit
+ *display
+ ***************************************************/
+function buildEditProdsDisplay($products){
+    $pd = '<div id="group">';
+    foreach ($products as $product) {
+        $pd .= '<div id="item">';
+        $pd .= "<a href='/shop/shopIndex.php?action=editItem&invId=$product[invid]'>";     
+        $pd .= "<img src='$product[invimg]' alt='Image of $product[invname]'></a>";
+        $pd .= '<hr>';
+        $pd .= "<h2>$product[invname]</h2>";
+        $pd .= "<span>$$product[invprice]</span>";
+        $pd .= '</div>';
+    }
+    $pd .= '</div>';
+    return $pd;
+}

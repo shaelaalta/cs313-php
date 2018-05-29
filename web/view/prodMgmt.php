@@ -29,66 +29,7 @@
         
         <main id="shop">
             <h2>Click to Edit Any Item</h2>
-            <?php
-            $showAll = 1;
-            $dbUrl = getenv('DATABASE_URL');
-
-            if (empty($dbUrl)) {
-                $dbUrl = "postgres://aaxshfcnahrbwi:ff8800c7b186b1134b1b5059e5306d47926abf3599e6fba861d9a10555cc0ecc@ec2-23-23-130-158.compute-1.amazonaws.com:5432/dbilarss332cbp";
-            }
-
-            $dbopts = parse_url($dbUrl);
-
-            $dbHost = $dbopts["host"];
-            $dbPort = $dbopts["port"];
-            $dbUser = $dbopts["user"];
-            $dbPassword = $dbopts["pass"];
-            $dbName = ltrim($dbopts["path"],'/');
-
-            try {
-                $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-            }
-            catch (PDOException $ex) {
-                print "<p>error: $ex->getMessage() </p>\n\n";
-                die();
-            }
-            
-            $check = 'SELECT clientemail, clientpass FROM client WHERE clientemail = :email';
-            $getIt = $db->prepare($check);
-            $getIt->bindValue(':email', $clientE, PDO::PARAM_STR);
-            $getIt->execute();
-            $matchEmail = $getIt->fetch(PDO::FETCH_ASSOC);
-            $getIt->closeCursor();
-            if(empty($matchEmail)){
-                $showAll = 0;
-            }
-            else if($matchEmail[clientpass] != $clientP){
-                $showAll = 0;
-            }
-            
-            if($showAll != 0){
-            $sql = 'SELECT * FROM inventory';
-            $stmt = $db->prepare($sql);
-            $stmt->execute();
-            $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            
-            $pd = '<div id="group">';
-            foreach ($products as $product) {
-                $pd .= '<div id="item">';
-                $pd .= "<a href='/shop/shopIndex.php?action=editItem&invId=$product[invid]'>";     
-                $pd .= "<img src='$product[invimg]' alt='Image of $product[invname]'></a>";
-                $pd .= '<hr>';
-                $pd .= "<h2>$product[invname]</h2>";
-                $pd .= "<span>$$product[invprice]</span>";
-                $pd .= '</div>';
-            }
-            $pd .= '</div>';
-            echo $pd;
-            }
-            else{
-                header("location: /shop/shopIndex.php?action=keepShop");
-            }
-            ?>
+            <?php echo $prodDisplay; ?>
         </main>
         
     </body>
