@@ -22,4 +22,5 @@ function getUnoProduct($invId){
     $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
     $stmt->execute();
     $products = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $products;
 }
