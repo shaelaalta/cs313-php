@@ -53,11 +53,11 @@
             }
             
             $check = 'SELECT clientemail, clientpass FROM client WHERE clientemail = :email';
-            $getIt = $db->prepare($sql);
+            $getIt = $db->prepare($check);
             $getIt->bindValue(':email', $clientE, PDO::PARAM_STR);
             $getIt->execute();
             $matchEmail = $getIt->fetch(PDO::FETCH_ASSOC);
-            $stmt->closeCursor();
+            $getIt->closeCursor();
             (if(empty($matchEmail))){
                 $showAll = 0;
             }
