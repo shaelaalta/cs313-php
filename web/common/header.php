@@ -20,7 +20,7 @@
             <li><a href="../dot.php">Home</a></li>
             <li><a href="../shop/shopIndex.php?action=keepShop">Shop</a></li>
             <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="../view/admin.php">Contact</a></li>
         </ul>
     </nav>
 </header>

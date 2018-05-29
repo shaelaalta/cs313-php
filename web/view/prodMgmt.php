@@ -29,7 +29,7 @@
         
         <main id="shop">
             <?php
-            //echo $prodDisplay;
+            $showAll = 1;
             $dbUrl = getenv('DATABASE_URL');
 
             if (empty($dbUrl)) {
@@ -52,6 +52,20 @@
                 die();
             }
             
+            $check = 'SELECT clientemail, clientpass FROM client WHERE clientemail = :email';
+            $getIt = $db->prepare($sql);
+            $getIt->bindValue(':email', $clientE, PDO::PARAM_STR);
+            $getIt->execute();
+            $matchEmail = $getIt->fetch(PDO::FETCH_ASSOC);
+            $stmt->closeCursor();
+            (if(empty($matchEmail))){
+                $showAll = 0;
+            }
+            else if($matchEmail[clientpass] != $clientP){
+                $showAll = 0;
+            }
+            
+            if($showAll != 0){
             $sql = 'SELECT * FROM inventory';
             $stmt = $db->prepare($sql);
             $stmt->execute();
@@ -69,6 +83,10 @@
             }
             $pd .= '</div>';
             echo $pd;
+            }
+            else{
+                header("location: /shop/shopIndex.php?action=keepShop");
+            }
             ?>
         </main>
         

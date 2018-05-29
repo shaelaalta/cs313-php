@@ -144,6 +144,17 @@ switch ($action) {
         header("location: /dot.php");
         break;
         
+    case 'adminLogin':
+        $clientE = filter_input(INPUT_POST, 'clientE', FILTER_SANITIZE_EMAIL);
+        $clientP = filter_input(INPUT_POST, 'clientP', FILTER_SANITIZE_STRING);
+        if(empty($clientE) || empty($clientP)){
+            $message = "<p class='notice'>Please provide ALL information</p>";
+            include '../view/admin.php';
+            break;
+        }
+        include '../view/prodMgmt.php';
+        break;
+        
     default:
         include '../dot.php';
 }
