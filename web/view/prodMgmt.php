@@ -57,7 +57,7 @@
             $getIt->bindValue(':email', $clientE, PDO::PARAM_STR);
             $getIt->execute();
             $matchEmail = $getIt->fetch(PDO::FETCH_ASSOC);
-            $getIt->closeCursor();
+            //$getIt->closeCursor();
             (if(empty($matchEmail))){
                 $showAll = 0;
             }
