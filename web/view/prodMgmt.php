@@ -58,7 +58,7 @@
             $getIt->execute();
             $matchEmail = $getIt->fetch(PDO::FETCH_ASSOC);
             $getIt->closeCursor();
-            (if(empty($matchEmail))){
+            if(empty($matchEmail)){
                 $showAll = 0;
             }
             /*else if($matchEmail[clientpass] != $clientP){
