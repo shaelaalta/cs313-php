@@ -109,7 +109,7 @@ switch ($action) {
         //$prodList = getProducts();
         //$prodDisplay = buildProductsDisplay($prodList);
         //$prodDisplay = getProducts();
-        //$prodDisplay = partyTime();
+        $prodDisplay = partyTime();
         include '../view/shop.php';
         break;
         
