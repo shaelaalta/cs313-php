@@ -3,8 +3,8 @@
 session_start();
 
 //require_once '../organize/connection.php';
-$path = $_SERVER['DOCUMENT_ROOT'] . '/organize/function.php';
-require_once($path);
+//$path = $_SERVER['DOCUMENT_ROOT'] . '/organize/function.php';
+//require_once($path);
 //require_once '../../model/shop-model.php';
 //require_once $_SERVER['DOCUMENT_ROOT'] . '/model/shop-model.php';
 
@@ -122,7 +122,7 @@ switch ($action) {
         //$prodList = getProducts();
         //$prodDisplay = buildProductsDisplay($prodList);
         //$prodDisplay = getProducts();
-        $prodDisplay = partyTime();
+        //$prodDisplay = partyTime();
         include '../view/shop.php';
         break;
         
