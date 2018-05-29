@@ -24,3 +24,23 @@ function getUnoProduct($invId){
     $products = $stmt->fetch(PDO::FETCH_ASSOC);
     return $products;
 }
+
+/******************************************************
+* checks emails and password when administrator logs in
+********************************************************/
+checkEmailNPass($clientE, $clientP){
+    $db = connect();
+    $check = 'SELECT clientemail, clientpass FROM client WHERE clientemail = :email';
+    $getIt = $db->prepare($check);
+    $getIt->bindValue(':email', $clientE, PDO::PARAM_STR);
+    $getIt->execute();
+    $matchEmail = $getIt->fetch(PDO::FETCH_ASSOC);
+    $getIt->closeCursor();
+    if(empty($matchEmail)){
+        return 0;
+    }
+    else if($matchEmail[clientpass] != $clientP){
+        return 0;
+    }
+    return 1;
+}

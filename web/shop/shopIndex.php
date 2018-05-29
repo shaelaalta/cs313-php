@@ -149,6 +149,12 @@ switch ($action) {
             include '../view/admin.php';
             break;
         }
+        $showAll = checkEmailNPass($clientE, $clientP);
+        if(empty($showAll)){
+            $message = "<p class='notice'>This information is invalid</p>";
+            include '../view/admin.php';
+            break;
+        }
         include '../view/prodMgmt.php';
         break;
     
