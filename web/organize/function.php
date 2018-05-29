@@ -1,6 +1,6 @@
 <?php
 
-***************************************************
+/***************************************************
  * builds product display list of certain category
  ***************************************************/
 /*function buildProductsDisplay($products)
