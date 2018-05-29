@@ -121,7 +121,7 @@ switch ($action) {
         //$prodList = getProducts();
         //$prodDisplay = buildProductsDisplay($prodList);
         //$prodDisplay = getProducts();
-        $prodDisplay = showParty();
+        //$prodDisplay = showParty();
         include '../view/shop.php';
         break;
         
