@@ -28,7 +28,7 @@ function getUnoProduct($invId){
 /******************************************************
 * checks emails and password when administrator logs in
 ********************************************************/
-checkEmailNPass($clientE, $clientP){
+function checkEmailNPass($clientE, $clientP){
     $db = connect();
     $check = 'SELECT clientemail, clientpass FROM client WHERE clientemail = :email';
     $getIt = $db->prepare($check);
