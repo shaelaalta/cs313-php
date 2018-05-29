@@ -29,40 +29,10 @@
         
         <main id="product">
             <?php
-            $dbUrl = getenv('DATABASE_URL');
-
-            if (empty($dbUrl)) {
-                $dbUrl = "postgres://aaxshfcnahrbwi:ff8800c7b186b1134b1b5059e5306d47926abf3599e6fba861d9a10555cc0ecc@ec2-23-23-130-158.compute-1.amazonaws.com:5432/dbilarss332cbp";
-            }
-
-            $dbopts = parse_url($dbUrl);
-
-            $dbHost = $dbopts["host"];
-            $dbPort = $dbopts["port"];
-            $dbUser = $dbopts["user"];
-            $dbPassword = $dbopts["pass"];
-            $dbName = ltrim($dbopts["path"],'/');
-
-            try {
-                $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-            }
-            catch (PDOException $ex) {
-                print "<p>error: $ex->getMessage() </p>\n\n";
-                die();
-            }
-            $sql = 'SELECT * FROM inventory WHERE invid = :invId';
-            $stmt = $db->prepare($sql);
-            $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
-            $stmt->execute();
-            $products = $stmt->fetch(PDO::FETCH_ASSOC);
-            
-            /*$prod = "";
-            foreach($products as $product){
-            $prod .= "<img src='$product[invimg]'><h1>$product[invname]</h1><p>$product[invdesc]</p><span>$$product[invprice]</span>";
-            }*/
             $prod = "<img src='$products[invimg]'><h1>$products[invname]</h1><p>$products[invdesc]</p><span>$$products[invprice]</span>";
             echo $prod;
             ?>
+            
             <form id="addCart" action="/shop/shopIndex.php" method="post">
                 <button type="submit" name="action" value="addCart">Add to Cart</button>
                 <input type="hidden" name="invName" <?php echo "value='$products[invname]'"; ?> >
