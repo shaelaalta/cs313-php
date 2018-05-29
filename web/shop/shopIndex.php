@@ -82,9 +82,10 @@ switch ($action) {
                 $remAmount = $lists[3];
                 break;
             }
+            else
+                continue;
         }
-        $finAmount -= $remAmount;
-        $_SESSION['count'] = $finAmount;
+        $_SESSION['count'] = $finAmount - $remAmount;
         /*for ($i = 0; $i < $length; $i++){
                 if($_SESSION['cart'][$i][1] == $invName){
                     $_SESSION['count'] -= $_SESSION['cart'][$i][3];
