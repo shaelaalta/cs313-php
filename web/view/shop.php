@@ -55,7 +55,7 @@ $sql = 'SELECT * FROM inventory';
     $stmt->execute();
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     //print_r($products);
- eho "<h2>" . $prodDisplay ."</h2>";
+ eho $prodDisplay;
  $pd = '<div id="group">';
     foreach ($products as $product) {
         $pd .= '<div id="item">';
