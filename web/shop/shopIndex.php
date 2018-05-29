@@ -3,6 +3,7 @@
 session_start();
 
 //require_once '../organize/connection.php';
+require_once '../organize/function.php';
 //$path = $_SERVER['DOCUMENT_ROOT'] . '/organize/function.php';
 //require_once($path);
 //require_once '../../model/shop-model.php';
