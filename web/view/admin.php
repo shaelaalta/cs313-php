@@ -31,7 +31,7 @@
         ?>
         
         <main id="admin">
-            <form id="administerLogin" action="shop/shopIndex.php" method="post">
+            <form id="administerLogin" action="/shop/shopIndex.php" method="post">
                 <label for="clientE">
                     <input type="text" name="cleintE" id="clientE"
                            <?php if(isset($clientE)){echo "value='$clientE'";} ?>
