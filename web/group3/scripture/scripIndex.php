@@ -23,9 +23,10 @@ switch ($action) {
             break;
         }
         
+        echo "book Id: $scripAdded";
         $updatedSt = addSt($topicId, $scripAdded);
         if($scripAdded == 0){
-            include '../view/seeScript.php';
+            echo "you missed something. . .";
             break;
         }
         echo "you did it!";
