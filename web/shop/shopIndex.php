@@ -174,7 +174,7 @@ switch ($action) {
         $image = filter_input(INPUT_POST, 'image', FILTER_SANITIZE_STRING);
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
         $desc = filter_input(INPUT_POST, 'desc', FILTER_SANITIZE_STRING);
-        $price = filter_input(INPUT_POST, 'image', FILTER_SANITIZE_NUMBER_FLOAT);
+        $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_NUMBER_FLOAT);
         $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
         $checkUpdate = updateProduct($image, $name, $desc, $price, $id);
         
