@@ -26,7 +26,7 @@
       </script>
         
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; 
-        echo message; ?>
+        echo $message; ?>
         
         <main id="product">
             <form id="updateProd" action="/shop/shopIndex.php" method="post">
