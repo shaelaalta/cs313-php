@@ -20,7 +20,14 @@ switch ($action) {
         $scripAdded = addScripture($book, $chapter, $verse, $content);
         if($scripAdded == 0){
             include '../view/seeScript.php';
+            break;
         }
+        $updatedSt = addSt($topicId);
+        if($scripAdded == 0){
+            include '../view/seeScript.php';
+            break;
+        }
+        echo "you did it!";
         break;
         
     default:

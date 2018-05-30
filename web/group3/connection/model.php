@@ -21,8 +21,24 @@ function addScripture($book, $chapter, $verse, $content){
     $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
     $stmt->bindValue(':content', $content, PDO::PARAM_STR);
     $stmt->execute();
-    //$rowsChanged = $stmt->rowCount();
-    $rowsChanged = $pdo->lastInsertId('scripture_id_seq')
+    $rowsChanged = $stmt->rowCount();
+    //$rowsChanged = $pdo->lastInsertId('scripture_id_seq')
     $stmt->closeCursor();
     return $rowsChanged;
+}
+
+/******************************************
+* add a scripture topic
+*******************************************/
+function addSt($tid){
+    $db = connect();
+    $bookId = $pdo->lastInsert('scripture_id_seq');
+    $sql ='INSERT INTO st (scrip_id, topic_id) VALUES (:scripId, :topicId)';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':scripId', $bookId, PDO::PARAM_INT);
+    $stmt->bindValue(':topicId', $tid, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    $return $rowsChanged;
 }
