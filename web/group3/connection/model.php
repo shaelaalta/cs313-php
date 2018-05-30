@@ -40,5 +40,5 @@ function addSt($tid){
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();
     $stmt->closeCursor();
-    $return $rowsChanged;
+    return $rowsChanged;
 }
