@@ -1,0 +1,25 @@
+<?php
+/* group work index page */
+
+require_once '../connection/connect.php';
+
+$action = filter_input(INPUT_POST, 'action');
+if ($action == NULL){
+ $action = filter_input(INPUT_GET, 'action');
+}
+
+switch ($action) {
+    case 'addScripture':
+        $book = filter_input(INPUT_POST, 'book', FILTER_SANITIZE_STRING);
+        $chapter = filter_input(INPUT_POST, 'chapter', FILTER_SANITIZE_NUMBER_INT);
+        $verse = filter_input(INPUT_POST, 'verse', FILTER_SANITIZE_NUMBER_INT);
+        $content = filter_input(INPUT_POST, 'content', FILTER_SANITIZE_STRING);
+        $topicId = filter_input(INPUT_POST, 'topics', FILTER_SANITIZE_NUMBER_INT);
+        
+        $checkUpdate = updateProduct($image, $name, $desc, $price, $id);
+        break;
+        
+    default:
+        $topics = getTopics();
+        include '../view/seeScript.php';
+}
