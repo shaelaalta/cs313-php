@@ -179,8 +179,8 @@ switch ($action) {
         $checkUpdate = updateProduct($image, $name, $desc, $price, $id);
         
         if($checkUpdate == 0){
+            $message = $image;
             include '../view/editItem.php';
-            $message = "$image $name $desc $price $id";
             break;
         }
         include '../view/prodMgmt.php';

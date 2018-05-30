@@ -25,8 +25,7 @@
           }
       </script>
         
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; 
-        echo $message; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; ?>
         
         <main id="product">
             <form id="updateProd" action="/shop/shopIndex.php" method="post">
