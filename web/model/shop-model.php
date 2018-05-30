@@ -55,7 +55,7 @@ function updateProduct($image, $name, $desc, $price, $id){
     $stmt->bindValue(':invimage', $image, PDO::PARAM_STR);
     $stmt->bindValue(':invname', $name, PDO::PARAM_STR);
     $stmt->bindValue(':invdesc', $desc, PDO::PARAM_STR);
-    $stmt->bindValue(':invprice', $iprice, PDO::PARAM_STR);
+    $stmt->bindValue(':invprice', $price, PDO::PARAM_STR);
     $stmt->bindValue(':invid', $id, PDO::PARAM_INT);
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();

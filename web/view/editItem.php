@@ -28,7 +28,7 @@
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; ?>
         
         <main id="product">
-            <form id="updatePord" action="/shop/shopIndex.php" method="post">
+            <form id="updateProd" action="/shop/shopIndex.php" method="post">
                 <label for="image">Current image location: <?php echo $products[invimg]; ?></label>
                 <input type="text" name="image" id="image" <?php echo "value='$products[invimg]'"; ?> >
                 <label for="name">Current name: <?php echo $products[invname]; ?></label>
@@ -38,7 +38,7 @@
                 <label for="price">Current Price: <?php echo $products[invprice]; ?></label>
                 <input type="number" step="0.01" min="0" name="price" id="price" <?php echo "value='$products[invprice]'"; ?> >
                 <input type="hidden" name="id" <?php echo "value='$products[invid]'"; ?> >
-                <button type="submit" name="action" value="changeProd">Submit Changes</button>
+                <button type="submit" name="action" value="updateProd">Submit Changes</button>
             </form>
         </main>
         

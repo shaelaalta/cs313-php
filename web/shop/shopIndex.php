@@ -170,7 +170,7 @@ switch ($action) {
         include '../view/editItem.php';
         break;
     
-    case 'changeProd':
+    case 'updateProd':
         $image = filter_input(INPUT_POST, 'image', FILTER_SANITIZE_STRING);
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
         $desc = filter_input(INPUT_POST, 'desc', FILTER_SANITIZE_STRING);
