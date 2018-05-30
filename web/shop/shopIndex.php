@@ -180,6 +180,7 @@ switch ($action) {
         
         if($checkUpdate == 0){
             include '../view/editItem.php';
+            $message = "$image $name $desc $price $id";
             break;
         }
         include '../view/prodMgmt.php';
