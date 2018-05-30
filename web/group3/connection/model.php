@@ -27,18 +27,27 @@ function addScripture($book, $chapter, $verse, $content){
         return NULL;
     }
     else {
-        $mim = 'SELECT id FROM scripture WHERE (book = :book, chapter = :chapter, verse = :verse, content = :content)';
-        $getIt = $db->prepare($mim);
-        $getIt->bindValue(':book', $book, PDO::PARAM_INT);
-        $getIt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
-        $getIt->bindValue(':verse', $verse, PDO::PARAM_INT);
-        $getIt->bindValue(':content', $content, PDO::PARAM_STR);
-        $getIt->execute();
-        $idNeed = $stmt->fetch(PDO::FETCH_ASSOC);
-        $getIt->closeCursor();
+        $idNeed = getScripId($book, $chapter, $verse, $content);
     }
     return $idNeed;
 }
+
+/***************************************
+* get scripture Id and send it back
+****************************************/
+function getScripId($book, $chapter, $verse, $content){
+    $db = connect();
+    $sql = 'SELECT id FROM scripture WHERE book = :book, chapter = :chapter, verse = :verse, content = :content';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':book', $book, PDO::PARAM_INT);
+    $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
+    $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
+    $stmt->bindValue(':content', $content, PDO::PARAM_STR);
+    $stmt->execute();
+    $scripId = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $scripId;
+}
+
 
 /******************************************
 * add a scripture topic
