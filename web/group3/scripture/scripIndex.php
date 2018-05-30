@@ -18,11 +18,12 @@ switch ($action) {
         $topicId = filter_input(INPUT_POST, 'topics', FILTER_SANITIZE_NUMBER_INT);
         
         $scripAdded = addScripture($book, $chapter, $verse, $content);
-        if($scripAdded == 0){
+        if($scripAdded = NULL){
             include '../view/seeScript.php';
             break;
         }
-        $updatedSt = addSt($topicId);
+        
+        $updatedSt = addSt($topicId, $scripAdded);
         if($scripAdded == 0){
             include '../view/seeScript.php';
             break;
