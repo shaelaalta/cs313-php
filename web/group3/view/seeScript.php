@@ -43,7 +43,7 @@
             <select name='topics'>
                 <?php 
                     $pd = "";
-                    foreach(topics as topic){
+                    foreach($topics as $topic){
                        $pd .="<option value='" .$topic[topicid] ."'>$topic[topicname]</option>";  
                     }
                     $pd .= "</select>";
