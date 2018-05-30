@@ -45,8 +45,21 @@ button:hover {
 ****************************************************
 ****************************************************/
 @media (min-width: 900px) {
+    #product {
+        font-size: 35px;
+    }
+    
+    #admin {
+        font-size: 35px;
+    }
+    
     input {
         width: 800px;
+        font-size: 30px;
+    }
+    
+    textarea {
+        font-size: 30px;
     }
     
     button {
