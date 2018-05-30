@@ -28,6 +28,7 @@
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; ?>
         
         <main id="product">
+            <?php echo message; ?>
             <form id="updateProd" action="/shop/shopIndex.php" method="post">
                 <label for="image">Current image location: <?php echo $products[invimg]; ?></label>
                 <input type="text" name="image" id="image" <?php echo "value='$products[invimg]'"; ?> >
