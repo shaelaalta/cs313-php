@@ -31,7 +31,7 @@
           </nav>
       </header>
     <main id="scripture">
-        <form id="scriptureForm" action="/scripture/scripIndex.php" method="post">
+        <form id="scriptureForm" action="/group3/scripture/scripIndex.php" method="post">
             <label for="book">Book: </label>
             <input type="text" name="book">
             <label for="chapter">Chapter: </label>
