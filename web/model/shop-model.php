@@ -44,3 +44,21 @@ function checkEmailNPass($clientE, $clientP){
     }
     return 1;
 }
+
+/******************************************************
+* update a product's information
+*******************************************************/
+function updateProduct($image, $name, $desc, $price, $id){
+    $db = connect();
+    $sql = 'UPDATE inventory SET invimage = :invimage, invname = :invname, invdesc = :invdesc, invprice = :invprice WHERE invid = :invid';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':invimage', $image, PDO::PARAM_STR);
+    $stmt->bindValue(':invname', $name, PDO::PARAM_STR);
+    $stmt->bindValue(':invdesc', $desc, PDO::PARAM_STR);
+    $stmt->bindValue(':invprice', $iprice, PDO::PARAM_STR);
+    $stmt->bindValue(':invid', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor():
+    return $rowsChanged;
+}

@@ -166,7 +166,23 @@ switch ($action) {
     
     case 'editItem':
         $invId = filter_input(INPUT_GET, 'invId', FILTER_SANITIZE_NUMBER_INT);
+        $products = getUnoProduct($invId);
         include '../view/editItem.php';
+        break;
+    
+    case 'changeProd':
+        $image = filter_input(INPUT_POST, 'image', FILTER_SANITIZE_STRING);
+        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+        $desc = filter_input(INPUT_POST, 'desc', FILTER_SANITIZE_STRING);
+        $price = filter_input(INPUT_POST, 'image', FILTER_SANITIZE_NUMBER_FLOAT);
+        $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+        $checkUpdate = updateProduct($image, $name, $desc, $price, $id, $checkUpdate);
+        
+        if($checkUpdate == 0){
+            include '../view/editItem.php';
+            break;
+        }
+        include '../view/prodMgmt.php';
         break;
         
     default:
