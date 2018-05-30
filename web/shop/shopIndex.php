@@ -179,7 +179,7 @@ switch ($action) {
         $checkUpdate = updateProduct($image, $name, $desc, $price, $id);
         
         if($checkUpdate == 0){
-            $message = $name;
+            $message = $desc;
             include '../view/editItem.php';
             break;
         }
