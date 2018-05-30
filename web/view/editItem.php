@@ -9,7 +9,7 @@
     <meta name="author" content="Shaela Sutton">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/css/home.css" type="text/css" rel="stylesheet"/>
-    <link href="/css/prod.css" type="text/css" rel="stylesheet"/>
+    <link href="/css/edit.css" type="text/css" rel="stylesheet"/>
 </head>
     <body>
         
@@ -34,7 +34,7 @@
                 <label for="name">Current name: <?php echo $products[invname]; ?></label>
                 <input type="text" name="name" id="name" <?php echo "value='$products[invname]'"; ?> >
                 <label for="desc">Current description: <?php echo $products[invdesc]; ?></label>
-                <input type="text" name="desc" id="desc" <?php echo "value='$products[invdesc]'"; ?> >
+                <textarea type="submit" rows='4' cols="50" name="desc" id="desc"> <?php echo $products[invdesc]; ?> </textarea>
                 <label for="price">Current Price: <?php echo $products[invprice]; ?></label>
                 <input type="number" step="0.01" min="0" name="price" id="price" <?php echo "value='$products[invprice]'"; ?> >
                 <input type="hidden" name="id" <?php echo "value='$products[invid]'"; ?> >

@@ -1,0 +1,16 @@
+#product {
+    margin-top: 40px;
+}
+
+input {
+    display: block;
+    width: 90vw;
+}
+
+textarea {
+    display: block;
+}
+
+button {
+    display: block;
+}
