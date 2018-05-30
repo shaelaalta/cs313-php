@@ -17,7 +17,8 @@ switch ($action) {
         $content = filter_input(INPUT_POST, 'content', FILTER_SANITIZE_STRING);
         $topicId = filter_input(INPUT_POST, 'topics', FILTER_SANITIZE_NUMBER_INT);
         
-        $checkUpdate = updateProduct($image, $name, $desc, $price, $id);
+        $scripAdded = addScripture($book, $chapter, $verse, $content);
+        echo $scripAdded;
         break;
         
     default:

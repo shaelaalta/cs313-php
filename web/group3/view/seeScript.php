@@ -50,7 +50,7 @@
                 echo $pd;
                 ?>
             </select>
-            <button id='scripButton' type="submit" name="action" value="addScripture"></button>
+            <button id='scripButton' type="submit" name="action" value="addScripture">Add Scripture with Topic</button>
         </form>
     </main>
 </body>
