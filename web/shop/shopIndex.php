@@ -176,7 +176,7 @@ switch ($action) {
         $desc = filter_input(INPUT_POST, 'desc', FILTER_SANITIZE_STRING);
         $price = filter_input(INPUT_POST, 'image', FILTER_SANITIZE_NUMBER_FLOAT);
         $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
-        $checkUpdate = updateProduct($image, $name, $desc, $price, $id, $checkUpdate);
+        $checkUpdate = updateProduct($image, $name, $desc, $price, $id);
         
         if($checkUpdate == 0){
             include '../view/editItem.php';
