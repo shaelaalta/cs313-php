@@ -182,7 +182,7 @@ switch ($action) {
             include '../view/editItem.php';
             break;
         }
-        include '../view/prodMgmt.php';
+        header("location: shopIndex.php?action=keepShop");
         break;
         
     default:
