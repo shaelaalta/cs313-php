@@ -21,7 +21,8 @@ function addScripture($book, $chapter, $verse, $content){
     $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
     $stmt->bindValue(':content', $content, PDO::PARAM_STR);
     $stmt->execute();
-    $rowsChanged = $pdo->lastInserId('scripture_id_seq');
+    //$rowsChanged = $stmt->rowCount();
+    $rowsChanged = $pdo->lastInsertId('scripture_id_seq')
     $stmt->closeCursor();
     return $rowsChanged;
 }

@@ -18,7 +18,9 @@ switch ($action) {
         $topicId = filter_input(INPUT_POST, 'topics', FILTER_SANITIZE_NUMBER_INT);
         
         $scripAdded = addScripture($book, $chapter, $verse, $content);
-        echo $scripAdded;
+        if($scripAdded == 0){
+            include '../view/seeScript.php';
+        }
         break;
         
     default:
