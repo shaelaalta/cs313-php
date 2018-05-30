@@ -1,17 +1,18 @@
 #product {
     margin-top: 40px;
-    font-size: 3.5vw;
+    font-size: 3.3vw;
 }
 
 #admin {
     margin-top: 40px;
-    font-size: 3.5vw;
+    font-size: 3.3vw;
 }
 
 input {
     display: block;
     width: 90vw;
     padding: 3px;
+    font-size: 3vw;
 }
 
 textarea {
