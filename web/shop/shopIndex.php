@@ -198,10 +198,12 @@ switch ($action) {
     case 'deleteProd':
         $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
         $dropProd = deleteProd($id);
-        if(dropProd == 0){
+        
+        if($dropProd == 0){
             echo "didn't work...";
             break;
         }
+        
         header("location: shopIndex.php?action=keepShop");
         break;
         
