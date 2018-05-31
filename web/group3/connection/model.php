@@ -23,19 +23,20 @@ function addScripture($book, $chapter, $verse, $content){
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();
     $stmt->closeCursor();
-    if($rowsChanged == 0){
+    /*if($rowsChanged = 0){
         return NULL;
     }
     else {
         $idNeed = getScripId($book, $chapter, $verse, $content);
     }
-    return $idNeed;
+    return $idNeed;*/
+    return $rowsChanged;
 }
 
 /***************************************
 * get scripture Id and send it back
 ****************************************/
-function getScripId($book, $chapter, $verse, $content){
+/*function getScripId($book, $chapter, $verse, $content){
     $db = connect();
     $sql = 'SELECT id FROM scripture WHERE book = :book, chapter = :chapter, verse = :verse, content = :content';
     $stmt = $db->prepare($sql);
@@ -46,14 +47,15 @@ function getScripId($book, $chapter, $verse, $content){
     $stmt->execute();
     $scripId = $stmt->fetch(PDO::FETCH_ASSOC);
     return $scripId;
-}
+}*/
 
 
 /******************************************
 * add a scripture topic
 *******************************************/
-function addSt($tid, $bookId){
+function addSt($tid){
     $db = connect();
+    $bookId = $db->lastInsertId("scripture_id_seq");
     $sql ='INSERT INTO st (scrip_id, topic_id) VALUES (:scripId, :topicId)';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':scripId', $bookId, PDO::PARAM_INT);
