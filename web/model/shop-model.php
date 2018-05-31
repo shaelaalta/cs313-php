@@ -93,3 +93,17 @@ function addProd($image, $name, $desc, $price, $category){
     $stmt->closeCursor();
     return $rowsChanged;
 }
+
+/*******************************************************
+* delte product from inventory table
+********************************************************/
+function deleteProd($id){
+    $db = connect();
+    $sql = 'DELETE FROM inventory WHERE invid = :id';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}

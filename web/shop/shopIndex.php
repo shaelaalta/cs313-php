@@ -194,6 +194,16 @@ switch ($action) {
         $categories = getCat();
         include '../view/newProd.php';
         break;
+    
+    case 'deleteProd':
+        $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+        $dropProd = deleteProd($id);
+        if(dropProd == 0){
+            echo "didn't work...";
+            break;
+        }
+        header("location: shopIndex.php?action=keepShop");
+        break;
         
     case 'addProd':
         $image = filter_input(INPUT_POST, 'image', FILTER_SANITIZE_STRING);
@@ -211,6 +221,7 @@ switch ($action) {
         if($addedProd == 0){
             echo "it didn't work...";
         }
+        header("location: shopIndex.php?action=keepShop");
         break;
         
     default:

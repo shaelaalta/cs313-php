@@ -41,6 +41,10 @@
                 <input type="hidden" name="id" <?php echo "value='$products[invid]'"; ?> >
                 <button type="submit" name="action" value="updateProd">Submit Changes</button>
             </form>
+            <form id="deleteProd" action="/shop/shopIndex.php" method="post">
+                <input type="hidden" name="id" <?php echo "value='$products[invid]'"; ?> >
+                <button type="submit" name="action" value="deleteProd">Delete Product</button>
+            </form>
         </main>
         
     </body>
