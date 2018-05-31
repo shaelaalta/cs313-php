@@ -28,6 +28,7 @@
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; ?>
         
         <main id="shop">
+            <a href="../shop/shopIndex.php?action=addProdPage">Add a New Product</a>
             <h2>Click to Edit Any Item</h2>
             <?php echo $prodDisplay; ?>
         </main>

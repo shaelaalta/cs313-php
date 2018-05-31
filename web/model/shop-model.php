@@ -12,6 +12,19 @@ function getProducts(){
     return $products;
 }
 
+/*********************************************
+* get all categories
+**********************************************/
+function getCat(){
+    $db = connect();
+    $sql = 'SELECT * FROM categories';
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $categories;
+}
+
 /***********************************************
 * gets one product with the invID
 ************************************************/
@@ -57,6 +70,24 @@ function updateProduct($image, $name, $desc, $price, $id){
     $stmt->bindValue(':invdesc', $desc, PDO::PARAM_STR);
     $stmt->bindValue(':invprice', $price, PDO::PARAM_STR);
     $stmt->bindValue(':invid', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}
+
+/*********************************************************
+* insert product info into inventory
+**********************************************************/
+function addProd($image, $name, $desc, $price, $category){
+    $db = connect();
+    $sql = 'INSERT inventory VALUES (DEFAULT, :name, :desc, :image, :price, :catnum)';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+    $stmt->bindValue(':desc', $desc, PDO::PARAM_STR);
+    $stmt->bindValue(':image', $image, PDO::PARAM_STR);
+    $stmt->bindValue(':price', $price, PDO::PARAM_STR);
+    $stmt->bindValue(':catnum', $category, PDO::PARAM_INT);
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();
     $stmt->closeCursor();

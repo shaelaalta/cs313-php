@@ -178,11 +178,39 @@ switch ($action) {
         $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
         $checkUpdate = updateProduct($image, $name, $desc, $price, $id);
         
+        if(empty($image) || empty($name) || empty($desc) || empty($price) || empty($id)){
+            $message = "do not leave any field empty";
+            include '../view/editItem.php';
+        }
+        
         if($checkUpdate == 0){
             include '../view/editItem.php';
             break;
         }
         header("location: shopIndex.php?action=keepShop");
+        break;
+    
+    case 'addProdPage':
+        $categories = getCat();
+        include '../view/newProd.php';
+        break;
+        
+    case 'addProd':
+        $image = filter_input(INPUT_POST, 'image', FILTER_SANITIZE_STRING);
+        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+        $desc = filter_input(INPUT_POST, 'desc', FILTER_SANITIZE_STRING);
+        $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_STRING);
+        $category = filter_input(INPUT_POST, 'category', FILTER_SANITIZE_NUMBER_INT);
+        
+        if(empty($image) || empty($name) || empty($desc) || empty($price)){
+            $message = "do not leave any field empty";
+            include '../view/newProd.php';
+        }
+        
+        $addedProd = addProd($image, $name, $desc, $price, $category);
+        if(addedProd == 0){
+            echo "it didn't work...";
+        }
         break;
         
     default:
