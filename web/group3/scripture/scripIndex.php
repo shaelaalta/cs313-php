@@ -23,7 +23,7 @@ switch ($action) {
         }
         
         $scripId = getThatScrip($book, $chapter, $verse, $content);
-        $sId = $scripId[id];
+        $sId = $scripId['id'];
         $updatedSt = addSt($topicId, $scId);
         if($updatedSt == 0){
             echo "you missed something. . .";
