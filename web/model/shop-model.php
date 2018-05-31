@@ -81,7 +81,7 @@ function updateProduct($image, $name, $desc, $price, $id){
 **********************************************************/
 function addProd($image, $name, $desc, $price, $category){
     $db = connect();
-    $sql = 'INSERT inventory VALUES (DEFAULT, :name, :desc, :image, :price, :catnum)';
+    $sql = 'INSERT INTO inventory VALUES (DEFAULT, :name, :desc, :image, :price, :catnum)';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':name', $name, PDO::PARAM_STR);
     $stmt->bindValue(':desc', $desc, PDO::PARAM_STR);
