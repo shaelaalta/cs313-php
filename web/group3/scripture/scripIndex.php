@@ -23,7 +23,7 @@ switch ($action) {
             break;
         }
         
-        $scripId = getScripId($book, $chapter, $verse, $content);
+        $scripId = getThatScrip($book, $chapter, $verse, $content);
         echo $scripId;
         //echo "book Id: $scripAdded";
         //$updatedSt = addSt($topicId, $scripAdded);
