@@ -54,12 +54,11 @@ function getThatScrip($book, $chapter, $verse, $content){
 /******************************************
 * add a scripture topic
 *******************************************/
-function addSt($tid){
+function addSt($tid, $scId){
     $db = connect();
-    $bookId = $db->lastInsertId("scripture_id_seq");
     $sql ='INSERT INTO st (scrip_id, topic_id) VALUES (:scripId, :topicId)';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':scripId', $bookId, PDO::PARAM_INT);
+    $stmt->bindValue(':scripId', $scId, PDO::PARAM_INT);
     $stmt->bindValue(':topicId', $tid, PDO::PARAM_INT);
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();
