@@ -208,7 +208,7 @@ switch ($action) {
         }
         
         $addedProd = addProd($image, $name, $desc, $price, $category);
-        if(addedProd == 0){
+        if($addedProd == 0){
             echo "it didn't work...";
         }
         break;
