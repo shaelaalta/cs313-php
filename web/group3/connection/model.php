@@ -37,17 +37,16 @@ function addScripture($book, $chapter, $verse, $content){
 * get scripture Id and send it back
 ****************************************/
 function getThatScrip($book, $chapter, $verse, $content){
-    /*$db = connect();
+    $db = connect();
     $sql = 'SELECT id FROM scripture WHERE book = :book, chapter = :chapter, verse = :verse, content = :content';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':book', $book, PDO::PARAM_INT);
+    $stmt->bindValue(':book', $book, PDO::PARAM_STR);
     $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
     $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
     $stmt->bindValue(':content', $content, PDO::PARAM_STR);
     $stmt->execute();
     $scripId = $stmt->fetch(PDO::FETCH_ASSOC);
-    return $scripId;*/
-    return 5;
+    return $scripId;
 }
 
 
