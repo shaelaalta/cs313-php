@@ -24,9 +24,11 @@ switch ($action) {
         
         $scripId = getThatScrip($book, $chapter, $verse, $content);
         $sId = $scripId['id'];
-        $updatedSt = addSt($topicId, $scId);
+        $updatedSt = addSt($topicId, $sId);
         if($updatedSt == 0){
             echo "you missed something. . .";
+            echo $sId;
+            echo $topicId;
             break;
         }
         echo "you did it!";
