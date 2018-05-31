@@ -24,6 +24,7 @@ switch ($action) {
         
         $scripId = getThatScrip($book, $chapter, $verse, $content);
         echo $scripId;
+        print_r($scripId);
         //echo "book Id: $scripAdded";
         //$updatedSt = addSt($topicId, $scripAdded);
         /*if($updatedSt == 0){
