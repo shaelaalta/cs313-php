@@ -73,14 +73,11 @@ switch ($action) {
         $list = $_SESSION['cart'];
         //$length = count($_SESSION['cart']);
         $remAmount = 0;
-        $finAmount = $_SESSION['count'];
+        //$finAmount = $_SESSION['count'];
         
         foreach($list as $lists){
             if($lists[1] === $invName)
             {
-                echo $lists[1];
-                print_r($lists);
-                echo $lists[3];
                 $remAmount = $lists[3];
                 break;
             }
@@ -89,7 +86,7 @@ switch ($action) {
         }
         //print_r($list);
         //echo "item amount $remAmount and cart amount $finAmount";
-        //$_SESSION['count'] = $finAmount - $remAmount;
+        $_SESSION['count'] -= $remAmount;
         /*for ($i = 0; $i < $length; $i++){
                 if($_SESSION['cart'][$i][1] == $invName){
                     $_SESSION['count'] -= $_SESSION['cart'][$i][3];
