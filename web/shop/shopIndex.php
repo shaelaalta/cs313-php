@@ -84,7 +84,8 @@ switch ($action) {
             else
                 continue;
         }
-        $_SESSION['count'] = $finAmount - $remAmount;
+        echo "item amount $remAmount and cart amount $finAmount";
+        //$_SESSION['count'] = $finAmount - $remAmount;
         /*for ($i = 0; $i < $length; $i++){
                 if($_SESSION['cart'][$i][1] == $invName){
                     $_SESSION['count'] -= $_SESSION['cart'][$i][3];
@@ -92,11 +93,11 @@ switch ($action) {
                 }
         }*/
         
-        $key = array_search($invName, $_SESSION['cart']);
+        /*$key = array_search($invName, $_SESSION['cart']);
         unset($_SESSION['cart'][$key]);
         $_SESSION['cart'] = array_values($_SESSION['cart']);
         
-        header("location: shopIndex.php?action=viewCart");
+        header("location: shopIndex.php?action=viewCart");*/
         break;
         
     case 'openCheckout':
