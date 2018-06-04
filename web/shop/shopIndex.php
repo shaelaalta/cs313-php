@@ -78,7 +78,7 @@ switch ($action) {
         foreach($list as $lists){
             if($lists[1] == $invName)
             {
-                print_r(lists);
+                print_r($lists);
                 echo $lists[3];
                 //$remAmount = $lists[3];
                 break;
