@@ -94,11 +94,11 @@ switch ($action) {
                 }
         }*/
         
-        /*$key = array_search($invName, $_SESSION['cart']);
+        $key = array_search($invName, $_SESSION['cart']);
         unset($_SESSION['cart'][$key]);
         $_SESSION['cart'] = array_values($_SESSION['cart']);
         
-        header("location: shopIndex.php?action=viewCart");*/
+        header("location: shopIndex.php?action=viewCart");
         break;
         
     case 'openCheckout':
