@@ -78,7 +78,7 @@ switch ($action) {
         foreach($list as $lists){
             if($lists[1] == $invName)
             {
-                $remAmount = $lists[3];
+                $remAmount += $lists[3];
                 break;
             }
             else
