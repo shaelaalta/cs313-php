@@ -71,7 +71,7 @@ switch ($action) {
     case 'remove':
         $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
         $list = $_SESSION['cart'];
-        $length = count($_SESSION['cart']);
+        //$length = count($_SESSION['cart']);
         $remAmount = 0;
         $finAmount = $_SESSION['count'];
         
