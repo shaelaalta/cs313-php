@@ -80,7 +80,7 @@ switch ($action) {
             {
                 print_r($lists);
                 echo $lists[3];
-                //$remAmount = $lists[3];
+                $remAmount = $lists[3];
                 break;
             }
             else
