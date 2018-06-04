@@ -78,14 +78,15 @@ switch ($action) {
         foreach($list as $lists){
             if($lists[1] == $invName)
             {
-                $remAmount += $lists['3'];
+                echo $lists[3];
+                //$remAmount = $lists[3];
                 break;
             }
             else
                 continue;
         }
-        print_r($list);
-        echo "item amount $remAmount and cart amount $finAmount";
+        //print_r($list);
+        //echo "item amount $remAmount and cart amount $finAmount";
         //$_SESSION['count'] = $finAmount - $remAmount;
         /*for ($i = 0; $i < $length; $i++){
                 if($_SESSION['cart'][$i][1] == $invName){
