@@ -84,6 +84,7 @@ switch ($action) {
             else
                 continue;
         }
+        print_r($list);
         echo "item amount $remAmount and cart amount $finAmount";
         //$_SESSION['count'] = $finAmount - $remAmount;
         /*for ($i = 0; $i < $length; $i++){
