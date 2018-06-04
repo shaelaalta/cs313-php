@@ -76,7 +76,7 @@ switch ($action) {
         $finAmount = $_SESSION['count'];
         
         foreach($list as $lists){
-            if($lists[1] == $invName)
+            if($lists[1] === $invName)
             {
                 print_r($lists);
                 echo $lists[3];
