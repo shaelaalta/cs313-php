@@ -36,7 +36,7 @@ switch ($action) {
         if(!empty($_SESSION['cart'])){
             $length = count($_SESSION['cart']);
             for ($i = 0; $i < $length; $i++){
-                if($_SESSION['cart'][$i][1] == $invName){
+                if($_SESSION['cart'][$i][1] === $invName){
                     $_SESSION['cart'][$i][3]++;
                     $_SESSION['count']++;
                     header("location: shopIndex.php?action=viewCart");
