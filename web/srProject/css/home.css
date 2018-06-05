@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Cookie|News+Cycle|Poiret+One');
+
+header {
+    background-color: skyblue;
+    padding-bottom: 10px;
+}
+
+header h1{
+    margin: 0px;
+    margin-left: 2vw;
+    margin-bottom: 10px;
+    font-size: 300%;
+    font-family: 'Amatic SC', cursive;
+}
+
+nav {
+    width: 100%; 
+    font-size: 90%;
+}
+
+.cNav a.icon {
+    display: block;
+    text-align: center;
+}
+
+.cNav li {
+    display: none;
+}
+
+.cNavshrinkIt a {
+    float: none;
+    display: block;
+}
+
+.cNavshrinkIt li {
+    text-align: center;
+    margin: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.cNavshrinkIt {
+    padding-left: 0px;
+}
+
+.cNavshrinkIt a.icon {
+    text-align: center;
+}
+
+nav ul{
+    padding-left: 0px;
+}
+
+nav a {
+    color: black;
+    transition: font-size 0.7s;
+    padding: 10px;
+}
+
+nav a:link {
+    color: black;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: black;
+}
+
+nav a:hover {
+    font-size: 110%;
+    background-color: white;
+}
+
+nav a:active {
+    color: black;
+}
+
+ul{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.cNavshrinkIt li:nth-child(5) {
+    margin-bottom: 0px;
+}
+
+body {
+    font-family: 'Poiret One', cursive;
+    padding: 0px;
+    margin: 0px;
+}
+
+/****************************************************
+*****************************************************
+* MEDIUM SCREEN
+*****************************************************
+****************************************************/
+@media (min-width: 500px) {
+    nav { 
+        font-size: 2.3vw;
+    }
+    
+    nav a {
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    nav ul{
+    /*padding: 1.5%;*/
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    }
+    
+    .cNav a.icon {
+    display: none;
+    }
+    
+    .cNav li {
+        display: block;
+    }
+}
+
+/***************************************************
+****************************************************
+* LARGE SCREEN
+****************************************************
+****************************************************/
+@media (min-width: 900px) {
+    header h1{
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    nav { 
+        font-size: 12pt;
+    }
+    
+    nav ul{
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    main {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
