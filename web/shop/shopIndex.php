@@ -71,9 +71,7 @@ switch ($action) {
     case 'remove':
         $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
         $list = $_SESSION['cart'];
-        //$length = count($_SESSION['cart']);
         $remAmount = 0;
-        //$finAmount = $_SESSION['count'];
         
         foreach($list as $lists){
             if($lists[1] === $invName)
@@ -84,15 +82,7 @@ switch ($action) {
             else
                 continue;
         }
-        //print_r($list);
-        //echo "item amount $remAmount and cart amount $finAmount";
         $_SESSION['count'] -= $remAmount;
-        /*for ($i = 0; $i < $length; $i++){
-                if($_SESSION['cart'][$i][1] == $invName){
-                    $_SESSION['count'] -= $_SESSION['cart'][$i][3];
-                    break;
-                }
-        }*/
         
         $key = array_search($invName, $_SESSION['cart']);
         unset($_SESSION['cart'][$key]);
