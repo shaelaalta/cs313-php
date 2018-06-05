@@ -25,7 +25,7 @@ switch ($action) {
         $startTime = filter_input(INPUT_POST, 'startTime', FILTER_SANITIZE_STRING);
         $endTime = filter_input(INPUT_POST, 'endTime', FILTER_SANITIZE_STRING);
         
-        $testDate = validateDate($date, $format = 'Y-m-d H:i:s');
+        $testDate = strtotime($date);
         
         if($testDate == 0){
             echo "nope";
