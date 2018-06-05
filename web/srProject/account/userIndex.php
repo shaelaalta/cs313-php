@@ -32,7 +32,7 @@ switch ($action) {
         }
         
         if(empty($clientFirstname) || empty($clientLastname) || 
-                empty($clientEmail) || empty($checkPassword)){
+                empty($clientEmail) || empty($clientPassword)){
             $message = "<p class='notice'>Please provide information for all empty form fields.</p>";
             include '../view/makeAccount.php';
             exit; 
