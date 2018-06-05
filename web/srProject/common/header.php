@@ -24,10 +24,10 @@
                         <a href="">Prices</a>
                     </li>
                     <li>
-                        <a href="../view/signIn.php">Sign In</a>
+                        <a href="/srProject/view/signIn.php">Sign In</a>
                     </li>
                     <li>
-                        <a href="../sched/schedIndex.php?action=viewSched">Schedule</a>
+                        <a href="/srProject/sched/schedIndex.php?action=viewSched">Schedule</a>
                     </li>
                 </ul>
             </nav>
