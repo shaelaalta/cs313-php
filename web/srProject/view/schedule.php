@@ -17,8 +17,8 @@
         
         <?php echo $showTimes; ?>
         
-        <form action="srProject/sched/schedIndex.php" method="post">
-            <label for="date">Enter the Month: </label>
+        <form action="../sched/schedIndex.php" method="post">
+            <label for="date">Enter the Date: </label>
             <input type="date" name="date" required>
             <label for="startTime">Start Time: </label>
             <input type="time" name="startTime" required>
