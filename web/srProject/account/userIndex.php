@@ -15,8 +15,8 @@ if ($action == NULL){
 
 switch ($action) {
     case 'register':
-        $clientFirstname = filter_input(INPUT_POST, 'Fname', FILTER_SANITIZE_STRING);
-        $clientLastname = filter_input(INPUT_POST, 'Lname', FILTER_SANITIZE_STRING);
+        $clientFirstname = filter_input(INPUT_POST, 'fname', FILTER_SANITIZE_STRING);
+        $clientLastname = filter_input(INPUT_POST, 'lname', FILTER_SANITIZE_STRING);
         $clientEmail = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $clientPassword = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
         
@@ -58,7 +58,7 @@ switch ($action) {
         break;
         
     case 'logIn':
-        $useremail = filter_input(INPUT_POST, 'useremail', FILTER_SANITIZE_EMAIL);
+        $useremail = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $userpassword = filter_input(INPUT_POST, 'userpassword', FILTER_SANITIZE_STRING);
         
         $useremail = checkEmail($useremail);
@@ -93,7 +93,10 @@ switch ($action) {
         $_SESSION['clientData'] = $clientData;
         header("location: /accounts/index.php");
         break;
-        
+    
+    case 'newAccount':
+        include '../view/makeAccount.php';
+        break;
         
     default:
         include '../view/signIn.php';

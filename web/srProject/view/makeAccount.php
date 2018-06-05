@@ -15,7 +15,7 @@
         
         <main id="signIn">
             <h1>Make Your Account</h1>
-            <form action="/srProject/accounts/index.php" method="post">
+            <form action="/srProject/account/userIndex.php" method="post">
                 <label for="fName">First Name: </label>
                 <input type="text" name="fName" placeholder="Your first name..." required>
                 <label for="lName">Last Name: </label>
@@ -23,7 +23,7 @@
                 <label for="email">Email: </label>
                 <input type="email" name="email" placeholder="Your email..." required>
                 <label for="password">Password: </label><input type="password" name="userpassword" placeholder="Your password. . . " required>
-                <button type="submit" name="action" value="login">Sign In</button>
+                <button type="submit" name="action" value="register">Register</button>
             </form>
         </main>
 
