@@ -15,8 +15,8 @@ if ($action == NULL){
 
 switch ($action) {
     case 'register':
-        $clientFirstname = filter_input(INPUT_POST, 'fname', FILTER_SANITIZE_STRING);
-        $clientLastname = filter_input(INPUT_POST, 'lname', FILTER_SANITIZE_STRING);
+        $clientFirstname = filter_input(INPUT_POST, 'fName', FILTER_SANITIZE_STRING);
+        $clientLastname = filter_input(INPUT_POST, 'lName', FILTER_SANITIZE_STRING);
         $clientEmail = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $clientPassword = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
         
