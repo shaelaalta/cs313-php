@@ -6,7 +6,7 @@ function regClient($clientFirstname, $clientLastname, $clientEmail, $clientPassw
 {
     $db = connect();
     $sql = 'INSERT INTO usert VALUES (DEFAULT, :clientFirstname, :clientLastname, '
-            . ':clientEmail, :clientPassword, DEFAULT)';
+            . ':clientEmail, DEFAULT, :clientPassword)';
     
     $stmt = $db->prepare($sql);
 
