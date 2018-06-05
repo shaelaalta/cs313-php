@@ -14,6 +14,7 @@
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/srProject/common/header.php'; ?>
         
         <main id="signIn">
+            <?php if(isset($message)){ echo $message; } ?>
             <h1>Make Your Account</h1>
             <form action="/srProject/account/userIndex.php" method="post">
                 <label for="fName">First Name: </label>
