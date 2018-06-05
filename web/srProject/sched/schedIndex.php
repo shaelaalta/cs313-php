@@ -25,8 +25,16 @@ switch ($action) {
         $startTime = filter_input(INPUT_POST, 'startTime', FILTER_SANITIZE_STRING);
         $endTime = filter_input(INPUT_POST, 'endTime', FILTER_SANITIZE_STRING);
         
-        echo "date: $date, time-start: $startTime, end-time: $endTime";
+        $insertSched = addTime($date, $startTime, $endTime);
+        
+        if($insertSched == 0){
+            echo "it didn't work";
+            break;
+        }
+        
+        header("location: schedIndex.php?action=viewSched");
         break;
+        
     default:
         include '../index.php';
         break;
