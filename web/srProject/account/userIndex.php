@@ -21,7 +21,6 @@ switch ($action) {
         $clientPassword = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
         
         $clientEmail = checkEmail($clientEmail);
-        //$checkPassword = checkPassword($clientPassword);
         $existingEmail = checkExistingEmail($clientEmail);
         
         if($existingEmail){
