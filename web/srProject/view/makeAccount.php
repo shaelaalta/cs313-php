@@ -23,7 +23,7 @@
                 <input type="text" name="lName" placeholder="Your last name..." required>
                 <label for="email">Email: </label>
                 <input type="email" name="email" placeholder="Your email..." required>
-                <label for="password">Password: </label><input type="password" name="userpassword" placeholder="Your password. . . " required>
+                <label for="password">Password: </label><input type="password" name="password" placeholder="Your password. . . " required>
                 <button type="submit" name="action" value="register">Register</button>
             </form>
         </main>
