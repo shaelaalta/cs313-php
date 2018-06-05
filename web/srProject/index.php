@@ -7,6 +7,6 @@ if ($action == NULL){
 
 switch ($action){
     default:
-        include 'view/signIn.php';
+        include 'view/home.php';
         break;
 }

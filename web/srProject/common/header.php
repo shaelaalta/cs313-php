@@ -21,7 +21,7 @@
                         <a href="">Prices</a>
                     </li>
                     <li>
-                        <a href="">Sign In</a>
+                        <a href="../view/signIn.php">Sign In</a>
                     </li>
                     <li>
                         <a href="">Schedule</a>

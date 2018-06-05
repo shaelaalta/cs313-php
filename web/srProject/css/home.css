@@ -7,8 +7,8 @@ header {
 
 header h1{
     margin: 0px;
+    padding: 0px;
     margin-left: 2vw;
-    margin-bottom: 10px;
     font-size: 300%;
     font-family: 'Amatic SC', cursive;
 }
@@ -88,6 +88,40 @@ body {
     font-family: 'Poiret One', cursive;
     padding: 0px;
     margin: 0px;
+}
+
+/*********home page**************/
+#home img{
+    width: 90vw;
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#banner {
+    background-color: steelblue;
+    position: relative;
+    text-align: center;
+    font-size: 3.5vw;
+    width: 70vw;
+    margin: auto;
+    top: 30px;
+    padding: 3px;
+    
+}
+
+#banner a:link{
+    color: white;
+    text-decoration: none;
+}
+
+#banner a:active {
+    color: white;
+}
+
+#banner a:hover{
+    color: skyblue;
 }
 
 /****************************************************
