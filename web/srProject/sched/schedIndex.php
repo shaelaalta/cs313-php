@@ -27,7 +27,7 @@ switch ($action) {
         
         $testDate = strtotime($date);
         
-        if($testDate == 0){
+        if($testDate == 0 && ($testDate < strtotime('now'))){
             echo "nope";
         }
         
