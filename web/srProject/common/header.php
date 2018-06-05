@@ -27,7 +27,7 @@
                         <a href="../view/signIn.php">Sign In</a>
                     </li>
                     <li>
-                        <a href="">Schedule</a>
+                        <a href="../sched/schedIndex.php?action=viewSched">Schedule</a>
                     </li>
                 </ul>
             </nav>
