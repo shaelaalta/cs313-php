@@ -10,10 +10,13 @@
           }
       </script>
         
-        <header><h1>photography</h1>
+<header><a href="../index.php" id="title"><h1>photography</h1></a>
             <nav class="cNav" id="myNav">
                 <ul>
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                    <li>
+                        <a href="../index.php">Home</a>
+                    </li>
                     <li>
                         <a href="">Gallery</a>
                     </li>

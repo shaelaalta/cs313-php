@@ -13,6 +13,19 @@ header h1{
     font-family: 'Amatic SC', cursive;
 }
 
+#title {
+    color: black;
+}
+
+#title:link{
+    text-decoration: none;
+    color: black;
+}
+
+#title:visited {
+    color: black;
+}
+
 nav {
     width: 100%; 
     font-size: 90%;
