@@ -25,7 +25,18 @@ switch ($action) {
         $startTime = filter_input(INPUT_POST, 'startTime', FILTER_SANITIZE_STRING);
         $endTime = filter_input(INPUT_POST, 'endTime', FILTER_SANITIZE_STRING);
         
-        $insertSched = addTime($date, $startTime, $endTime);
+        $testDate = validateDate($date, $format = 'Y-m-d H:i:s');
+        
+        if($testDate == 0){
+            echo "nope";
+        }
+        
+        else
+        {
+            echo "it happened";
+        }
+        
+        /*$insertSched = addTime($date, $startTime, $endTime);
         
         if($insertSched == 0){
             echo "it didn't work";
@@ -33,6 +44,7 @@ switch ($action) {
         }
         
         header("location: schedIndex.php?action=viewSched");
+        */
         break;
         
     default:

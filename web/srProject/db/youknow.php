@@ -13,3 +13,8 @@ function availableSched($times){
     $pd .= "</div>";
     return $pd;
 }
+
+function validateDate($date, $format){
+    $d = DateTime::createFromFormat($format, $date);
+    return $d && $d->format($format) == $date;
+}
