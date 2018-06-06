@@ -52,7 +52,14 @@ switch ($action) {
         
         $addAppt = addAppointment($schedId, $userId);
         if($addAppt == 0){
-            echo nope;
+            echo "nope";
+            break;
+        }
+        
+        $schedCheck = updateSched($schedId);
+        if($schedCheck == 0)
+        {
+            echo "didn't work";
             break;
         }
         header("location: schedIndex.php?action=viewSched");

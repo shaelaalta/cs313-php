@@ -34,3 +34,14 @@ function addAppointment($schedId, $userId){
     $stmt->closeCursor();
     return $rowsChanged;
 }
+
+function updateSched($schedId){
+    $db = connect();
+    $sql = 'UPDATE schedule SET booked = 2 WHERE schedid = :schedId';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':schedId', $schedId, PDO::PARAM_STR);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}
