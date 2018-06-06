@@ -8,6 +8,10 @@ require_once '../db/connect.php';
 require_once '../db/youknow.php';
 require_once '../photoModel/sched-model.php';
 
+if(isset($_SESSION['loggedin'])){
+    $sessionName = $_SESSION['clientData']['userfirstname'];
+}
+
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL){
  $action = filter_input(INPUT_GET, 'action');
@@ -29,14 +33,10 @@ switch ($action) {
         
         if($testDate == 0 || ($testDate < strtotime('now'))){
             echo "nope";
+            break;
         }
         
-        else
-        {
-            echo "it happened";
-        }
-        
-        /*$insertSched = addTime($date, $startTime, $endTime);
+        $insertSched = addTime($date, $startTime, $endTime);
         
         if($insertSched == 0){
             echo "it didn't work";
@@ -44,7 +44,18 @@ switch ($action) {
         }
         
         header("location: schedIndex.php?action=viewSched");
-        */
+        break;
+        
+    case 'bookTime':
+        $schedId = filter_input(INPUT_GET, 'timeId', FILTER_SANITIZE_NUMBER_INT);
+        $userId = $_SESSION['clientData']['userid'];
+        
+        $addAppt = addAppointment($schedId, $userId);
+        if($addAppt == 0){
+            echo nope;
+            break;
+        }
+        header("location: schedIndex.php?action=viewSched");
         break;
         
     default:

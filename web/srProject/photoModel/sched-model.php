@@ -22,3 +22,15 @@ function addTime($date, $stime, $etime){
     $stmt->closeCursor();
     return $rowsChanged;
 }
+
+function addAppointment($schedId, $userId){
+    $db = connect();
+    $sql = 'INSERT INTO apt VALUES (DEFAULT, :userid, :schedid)';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':userid', $userId, PDO::PARAM_INT);
+    $stmt->bindValue(':schedid', $schedId, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}

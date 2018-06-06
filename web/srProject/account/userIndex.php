@@ -8,6 +8,10 @@ require_once '../db/connect.php';
 require_once '../db/youknow.php';
 require_once '../photoModel/user-model.php';
 
+if(isset($_SESSION['loggedin'])){
+    $sessionName = $_SESSION['clientData']['userfirstname'];
+}
+
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL){
  $action = filter_input(INPUT_GET, 'action');
