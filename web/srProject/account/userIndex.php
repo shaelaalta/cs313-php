@@ -74,17 +74,17 @@ switch ($action) {
             exit;
         }
         
-        /*$existingEmail = checkExistingEmail($useremail);
+        $existingEmail = checkExistingEmail($useremail);
         
         if(!$existingEmail){
             $message = "<p class='notice'>That email address doesn't exist. Do you want to create an account instead?</p>";
             include '../view/signIn.php';
             exit;
-        }*/
+        }
 
         
         $clientData = getClient($useremail);
-        $hashCheck = password_verify($userpassword, $clientData['clientPassword']);
+        $hashCheck = password_verify($userpassword, $clientData['userpassword']);
         
         if (!$hashCheck) {
             $message = '<p class="notice">Please check your password and try again.</p>';
