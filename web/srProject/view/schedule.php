@@ -15,7 +15,12 @@
     
     <main id="sched">
         
-        <?php echo $showTimes; ?>
+        <?php 
+        if(isset($sessionName)){
+            echo "Welcome $sessionName";
+        }
+        
+        echo $showTimes; ?>
         
         <form action="../sched/schedIndex.php" method="post">
             <label for="date">Enter the Date: </label>
