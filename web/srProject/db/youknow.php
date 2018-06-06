@@ -11,7 +11,7 @@ function availableSched($times){
         //$schedTimeE = date_format($time['timeend'], 'g:i A');
         //$pd .= date_format($time['day'], 'l js F Y');
         //$pd .=" from ". date_format($time[timestart], 'g:i A') . "to ". $schedTimeE;
-        $pd .= "$time[day] $time[timestart] to $time[timeend] "
+        $pd .= "$time[day] $time[timestart] to $time[timeend] ";
         $pd .= "<a href='../sched/schedIndex.php?action=bookTime&timeId=$time[schedid]'>Schedule</a><br>";
     }
     $pd .= "</div>";
