@@ -95,7 +95,7 @@ switch ($action) {
         $_SESSION['loggedin'] = TRUE;
         array_pop($clientData);
         $_SESSION['clientData'] = $clientData;
-        header("location: /srProjct/sched/schedIndex.php");
+        header("location: /srProject/sched/schedIndex.php?action=viewSched");
         break;
     
     case 'newAccount':
