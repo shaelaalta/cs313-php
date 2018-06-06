@@ -61,7 +61,7 @@ switch ($action) {
         }
         break;
         
-    case 'logIn':
+    case 'login':
         $useremail = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $userpassword = filter_input(INPUT_POST, 'userpassword', FILTER_SANITIZE_STRING);
         
