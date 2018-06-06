@@ -8,13 +8,10 @@ function checkEmail($clientEmail){
 function availableSched($times){
     $pd = '<div id="group">';
     foreach($times as $time){
-        $pd .= "$time[day], $time[timestart], $time[timeend]";
+        $pd .= date_formate($time[day], 'l js F Y');
+        $pd .= " from  $time[timestart] to $time[timeend]";
+        $pd .= "<a href='../sched/schedIndex.php?action=bookTime'>Schedule</a><br>";
     }
     $pd .= "</div>";
     return $pd;
-}
-
-function validateDate($date, $format){
-    $d = DateTime::createFromFormat($format, $date);
-    return $d && $d->format($format) == $date;
 }
