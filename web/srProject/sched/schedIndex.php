@@ -21,6 +21,11 @@ switch ($action) {
     case 'viewSched':
         $times = getTimes();
         $showTimes = availableSched($times);
+        
+        if(isset($_SESSION['loggedin'])){
+            $sessId = $_SESSION['clientData']['userid'];
+            $personal = getPerson($sessId);
+        }
         include '../view/schedule.php';
         break;
         

@@ -31,6 +31,12 @@
             <input type="time" name="endTime" required>
             <button type="submit" name="action" value="addSched">Add Photoshoot Time</button>
         </form>
+        
+        <?php 
+        if(isset($_SESSION['loggedin'])){
+            print_r($personal);
+        }
+        ?>
     </main>
 </body>
 </html>
