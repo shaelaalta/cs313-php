@@ -48,7 +48,7 @@ function updateSched($schedId){
 
 function getPerson($sessId){
      $db = connect();
-    $sql = 'SELECT usert.firstname, usert.lastname, * schedule FROM ((apt INNER JOIN usert ON apt.userid = usert.userid WHERE apt.userid = :sessId) INNER JOIN schedule ON apt.schedid = schedule.schedid)';
+    $sql = 'SELECT usert.firstname, usert.lastname, schedule.day FROM ((apt INNER JOIN usert ON apt.userid = usert.userid WHERE apt.userid = :sessId) INNER JOIN schedule ON apt.schedid = schedule.schedid)';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':sessId', $sessId, PDO::PARAM_STR);
     $stmt->execute();
