@@ -53,6 +53,6 @@ function getPerson($sessId){
     $stmt->bindValue(':sessId', $sessId, PDO::PARAM_STR);
     $stmt->execute();
     $specific = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $stmt->closeCurosr();
+    $stmt->closeCursor();
     return $specific;
 }
