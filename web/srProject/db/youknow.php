@@ -8,12 +8,14 @@ function checkEmail($clientEmail){
 function availableSched($times){
     $pd = '<div id="group">';
     foreach($times as $time){
-        //$schedTimeE = date_format($time['timeend'], 'g:i A');
         //$pd .= date_format($time['day'], 'l js F Y');
-        //$pd .=" from ". date_format($time[timestart], 'g:i A') . "to ". $schedTimeE;
         $date = date_create($time['day']);
-        $pd .= date_format($date, 'l js F Y');   
-        $pd .= "$time[day] $time[timestart] to $time[timeend] ";
+        $pd .= date_format($date, 'l d F Y');
+        $timeS = date_create($time[timestart]);
+        $stime = date_format($timeS, 'g:i A');
+        $timeE = date_create($time[timeend]);
+        $etime = date_format($timeE, 'g:i A');
+        $pd .= "$date from $stime to $etime ";
         $pd .= "<a href='../sched/schedIndex.php?action=bookTime&timeId=$time[schedid]'>Schedule</a><br>";
     }
     $pd .= "</div>";
