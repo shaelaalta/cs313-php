@@ -124,6 +124,10 @@ body {
     
 }
 
+#banner a {
+    color: white;
+}
+
 #banner a:link{
     color: white;
     text-decoration: none;
