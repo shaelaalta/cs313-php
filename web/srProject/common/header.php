@@ -24,7 +24,7 @@
                         <a href="">Prices</a>
                     </li>
                     <li>
-                        <a href="/srProject/view/signIn.php">Sign In</a>
+                        <a href="/srProject/account/userIndex.php">Sign In</a>
                     </li>
                     <li>
                         <a href="/srProject/sched/schedIndex.php?action=viewSched">Schedule</a>
