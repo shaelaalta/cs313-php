@@ -1,4 +1,5 @@
 #signIn {
+    max-width: 900px;
     margin-top: 20px;
     font-size: 120%;
     padding: 4vw;
@@ -9,8 +10,8 @@
 }
 
 #sched {
-    margin-top: 15px;
     padding: 4vw;
+    max-width: 900px;
 }
 
 form{
@@ -78,7 +79,7 @@ button:hover{
     }
     
     #group{
-        max-width: 600px;
+        max-width: 800px;
         padding: 10px;
         display: block;
         margin-left: auto;
@@ -86,7 +87,7 @@ button:hover{
     }
     
     #personalSched{
-        max-width: 600px;
+        max-width: 800px;
         padding: 10px;
         display: block;
         margin-left: auto;
