@@ -24,7 +24,7 @@ switch ($action) {
         
         if(isset($_SESSION['loggedin'])){
             if($_SESSION['clientData']['clearance']==3){
-                $personal = getFullSched()
+                $personal = getFullSched();
             }
             else{
                 $sessId = $_SESSION['clientData']['userid'];
