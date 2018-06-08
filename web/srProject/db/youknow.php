@@ -26,7 +26,7 @@ function availableSched($times){
 }
 
 function buildPersonalSched($personal){
-    $pd = '<div id="personalSched">';
+    $pd = '<ul id="personalSched">';
     foreach($personal as $pers){
         $date = date_create($pers['day']);
         $dateDay= date_format($date, 'l d F Y');
@@ -34,8 +34,8 @@ function buildPersonalSched($personal){
         $stime = date_format($timeS, 'g:i A');
         $timeE = date_create($pers['timeend']);
         $etime = date_format($timeE, 'g:i A');
-        $pd .= "$pers[userfirstname] $pers[userlastname] your photoshoot is on $dateDay from $stime-$etime<br>";
+        $pd .= "<li>$pers[userfirstname] $pers[userlastname] your photoshoot is on $dateDay from $stime-$etime</li>";
     }
-    $pd .="</div>";
+    $pd .="</ul>";
     return $pd;
 }
