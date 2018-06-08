@@ -10,6 +10,7 @@ require_once '../photoModel/sched-model.php';
 
 if(isset($_SESSION['loggedin'])){
     $sessionName = $_SESSION['clientData']['userfirstname'];
+    $sessionClearance = $_SESSION['clientData']['clearance']; 
 }
 
 $action = filter_input(INPUT_POST, 'action');
@@ -52,17 +53,7 @@ switch ($action) {
         header("location: schedIndex.php?action=viewSched");
         break;
         
-    case 'delSched':
-        $date = filter_input(INPUT_POST, 'date', FILTER_SANITIZE_STRING);
-        $startTime = filter_input(INPUT_POST, 'startTime', FILTER_SANITIZE_STRING);
-        $endTime = filter_input(INPUT_POST, 'endTime', FILTER_SANITIZE_STRING);
-        
-        $testDate = strtotime($date);
-        
-        if($testDate == 0 || ($testDate < strtotime('now'))){
-            echo "nope";
-            break;
-        }
+    case 'delTime':
         break;
         
     case 'bookTime':
