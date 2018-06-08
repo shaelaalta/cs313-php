@@ -15,7 +15,7 @@
                 <ul>
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
                     <li>
-                        <a href="srProject/index.php">Home</a>
+                        <a href="../index.php">Home</a>
                     </li>
                     <li>
                         <a href="">Gallery</a>
