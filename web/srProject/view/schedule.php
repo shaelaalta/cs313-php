@@ -31,7 +31,6 @@
         
         <?php
         echo $seePersonal;
-        }
         
         if($sessionClearance == 3){
             echo '<form action="../sched/schedIndex.php" method="post">
