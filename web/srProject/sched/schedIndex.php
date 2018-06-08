@@ -25,6 +25,7 @@ switch ($action) {
         if(isset($_SESSION['loggedin'])){
             $sessId = $_SESSION['clientData']['userid'];
             $personal = getPerson($sessId);
+            $seePersonal = buildPersonalSched($personal);
         }
         include '../view/schedule.php';
         break;

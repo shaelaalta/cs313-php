@@ -17,3 +17,11 @@ function availableSched($times){
     $pd .= "</div>";
     return $pd;
 }
+
+function buildPersonalSched($personal){
+    $pd = '<div id="personalSched">';
+    foreach($personal as $pers){
+        $pd .= "$pers[userfirstname] $pers[userlastname] your photoshoot is on $pers[day] from $pers[timestart]-$pers[timeend]<br>";
+    }
+    $pd .="</div>";
+}

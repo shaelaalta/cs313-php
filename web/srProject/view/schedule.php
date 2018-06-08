@@ -34,7 +34,7 @@
         
         <?php 
         if(isset($_SESSION['loggedin'])){
-            print_r($personal);
+            echo $seePersonal;
         }
         ?>
     </main>
