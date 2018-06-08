@@ -14,10 +14,10 @@
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/srProject/common/header.php'; ?>
         
         <main id="signIn">
-            <?php if(isset($message)) { echo $message; } 
+            <?php if(isset($message)){ echo $message; } 
             
             if(isset($_SESSION['loggedin'])){
-                echo "work baby!"
+                echo "work baby!";
             }
             ?>
             
