@@ -13,5 +13,5 @@
         
         <main id="home">
             <div id="banner"><a href="/srProject/view/signIn.php">Sign In to Schedule a Photoshoot</a></div>
-            <img src="/images/hands.jpg" id="homePic" alt="picture of hands">
+            <img src="/images/cutie.jpg" id="homePic" alt="picture of hands">
         </main>
