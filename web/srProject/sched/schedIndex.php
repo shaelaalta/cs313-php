@@ -52,6 +52,19 @@ switch ($action) {
         header("location: schedIndex.php?action=viewSched");
         break;
         
+    case 'delSched':
+        $date = filter_input(INPUT_POST, 'date', FILTER_SANITIZE_STRING);
+        $startTime = filter_input(INPUT_POST, 'startTime', FILTER_SANITIZE_STRING);
+        $endTime = filter_input(INPUT_POST, 'endTime', FILTER_SANITIZE_STRING);
+        
+        $testDate = strtotime($date);
+        
+        if($testDate == 0 || ($testDate < strtotime('now'))){
+            echo "nope";
+            break;
+        }
+        break;
+        
     case 'bookTime':
         $schedId = filter_input(INPUT_GET, 'timeId', FILTER_SANITIZE_NUMBER_INT);
         $userId = $_SESSION['clientData']['userid'];

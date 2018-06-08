@@ -10,7 +10,6 @@ require_once '../photoModel/user-model.php';
 
 if(isset($_SESSION['loggedin'])){
     $sessionName = $_SESSION['clientData']['userfirstname'];
-    $sessionClearance = $_SESSION['clientData']['clearance'];
 }
 
 $action = filter_input(INPUT_POST, 'action');

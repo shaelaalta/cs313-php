@@ -26,14 +26,14 @@
             echo "<h2>Welcome $sessionName</h2>";
         }
         
-        echo $showTimes; ?>
+        echo "<h3>Available Slots</h3> $showTimes"; ?>
         
         
         <?php
-        echo $seePersonal;
+        echo "<h3>Your Scheduled PhotoShoot</h3> $seePersonal";
         
         if($_SESSION['clientData']['clearance'] == 3){
-            echo '<form action="../sched/schedIndex.php" method="post">
+            echo '<h3>Enter or Delete A Time Slot</h3><form action="../sched/schedIndex.php" method="post">
             <label for="date">Enter the Date: </label>
             <input type="date" name="date" required>
             <label for="startTime">Start Time: </label>
@@ -41,6 +41,7 @@
             <label for="endTime">End Time: </label>
             <input type="time" name="endTime" required>
             <button type="submit" name="action" value="addSched">Add Photoshoot Time</button>
+            <button type ="submit" name="action" value"delSched">Delete Photoshoot Time</button>
             </form>';
         }
         ?>

@@ -78,7 +78,7 @@ button:hover{
     }
     
     #group{
-        width: 600px;
+        max-width: 600px;
         padding: 10px;
         display: block;
         margin-left: auto;
@@ -86,7 +86,7 @@ button:hover{
     }
     
     #personalSched{
-        width: 600px;
+        max-width: 600px;
         padding: 10px;
         display: block;
         margin-left: auto;

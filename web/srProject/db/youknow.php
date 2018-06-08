@@ -16,8 +16,7 @@ function availableSched($times){
         $timeE = date_create($time['timeend']);
         $etime = date_format($timeE, 'g:i A');
         $pd .= "$dateDay from $stime to $etime ";
-        $pd .= "<a href='../sched/schedIndex.php?action=bookTime&timeId=$time[schedid]'>Schedule</a><br>";
-    }
+        $pd .= "<a href='../sched/schedIndex.php?action=bookTime&timeId=$time[schedid]'>Schedule</a> <?php if($_SESSION['clientData']['clearance'] == 3){ echo \"<a href='../sched/schedIndex.php?action=delTime&timeId=$time[schedid]'>Schedule</a>'\";}<br>";
     $pd .= "</div>";
     return $pd;
 }
