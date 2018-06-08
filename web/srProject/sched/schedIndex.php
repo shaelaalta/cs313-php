@@ -53,6 +53,11 @@ switch ($action) {
         break;
         
     case 'delTime':
+        $schedId = filter_input(INPUT_GET, 'timeId', FILTER_SANITIZE_NUMBER_INT);
+        
+        $remAppt = removeAppointment($schedId);
+        if($remAppt == 0){ echo "nope"; break; }
+        header("location: schedIndex.php?action=viewSched");
         break;
         
     case 'bookTime':
@@ -64,10 +69,8 @@ switch ($action) {
             echo "nope";
             break;
         }
-        
         $schedCheck = updateSched($schedId);
-        if($schedCheck == 0)
-        {
+        if($schedCheck == 0){
             echo "didn't work";
             break;
         }

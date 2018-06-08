@@ -56,3 +56,14 @@ function getPerson($sessId){
     $stmt->closeCursor();
     return $specific;
 }
+
+function removeAppointment($schedId){
+    $db = connect();
+    $sql = 'DELETE FROM schedule WHERE schedid = :schedId';
+     $stmt = $db->prepare($sql);
+    $stmt->bindValue(':schedId', $schedId, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}

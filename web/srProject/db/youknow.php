@@ -8,7 +8,6 @@ function checkEmail($clientEmail){
 function availableSched($times){
     $pd = '<div id="group">';
     foreach($times as $time){
-        //$pd .= date_format($time['day'], 'l js F Y');
         $date = date_create($time['day']);
         $dateDay= date_format($date, 'l d F Y');
         $timeS = date_create($time['timestart']);
@@ -16,7 +15,7 @@ function availableSched($times){
         $timeE = date_create($time['timeend']);
         $etime = date_format($timeE, 'g:i A');
         $pd .= "$dateDay from $stime to $etime ";
-        $pd .= "<a href='../sched/schedIndex.php?action=bookTime&timeId=$time[schedid]'>Schedule</a>";
+        $pd .= "<a href='../sched/schedIndex.php?action=bookTime&timeId=$time[schedid]'>Schedule</a> ";
         if($_SESSION['clientData']['clearance'] == 3){
             $pd .= "<a href='../sched/schedIndex.php?action=delTime&timeId=$time[schedid]'>Delete</a>'\";<br>";
         }
