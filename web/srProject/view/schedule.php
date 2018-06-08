@@ -1,7 +1,6 @@
 <?php
     if(!isset($_SESSION['loggedin'])){
-            $message = "Log in first to schedule";
-            header("location: /srProject/account/userIndex.php");
+            header("location: /srProject/account/userIndex.php?action=forgot");
         }
 ?>
 

@@ -108,6 +108,10 @@ switch ($action) {
         include '../view/makeAccount.php';
         break;
         
+    case 'forgot':
+        $message = "You need to sign in before seeing the schedule";
+        include '../view/signIn.php';
+        
     default:
         include '../view/signIn.php';
         break;
