@@ -9,8 +9,7 @@ require_once '../db/youknow.php';
 require_once '../photoModel/sched-model.php';
 
 if(isset($_SESSION['loggedin'])){
-    $sessionName = $_SESSION['clientData']['userfirstname'];
-    $sessionClearance = $_SESSION['clientData']['clearance']; 
+    $sessionName = $_SESSION['clientData']['userfirstname']; 
 }
 
 $action = filter_input(INPUT_POST, 'action');
