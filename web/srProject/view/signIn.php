@@ -17,11 +17,11 @@
             <?php if(isset($message)) { echo $message; } 
             
             if(isset($_SESSION['loggedin'])){
-                echo 'logged in!';
+                echo "work baby!"
             }
             ?>
             
-            <form> action="/srProject/account/userIndex.php" method="post">
+            <form action="/srProject/account/userIndex.php" method="post">
                 <label for="button">Haven't created an account yet?</label><button type="submit" name="action" value="newAccount">Create Account</button>
             </form>
             
