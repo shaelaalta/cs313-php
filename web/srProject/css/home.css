@@ -17,12 +17,12 @@ header h1{
     color: black;
 }
 
-#title:link{
+#title a:link{
     text-decoration: none;
     color: black;
 }
 
-#title:visited {
+#title a:visited {
     color: black;
 }
 
