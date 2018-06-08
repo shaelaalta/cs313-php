@@ -18,11 +18,12 @@ function availableSched($times){
         $pd .= "$dateDay from $stime to $etime ";
         $pd .= "<a href='../sched/schedIndex.php?action=bookTime&timeId=$time[schedid]'>Schedule</a>";
         if($sessionClearance == 3){
-            $pd .= "<a href='../sched/schedIndex.php?action=delTime&timeId=$time[schedid]'>Delete</a>'\"; }?><br>";
+            $pd .= "<a href='../sched/schedIndex.php?action=delTime&timeId=$time[schedid]'>Delete</a>'\";<br>";
         }
         else { $pd .= "<br>"; }
     $pd .= "</div>";
     return $pd;
+}
 }
 
 function buildPersonalSched($personal){
