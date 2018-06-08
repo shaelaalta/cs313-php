@@ -16,7 +16,7 @@
         <main id="signIn">
             <?php if(isset($message)) { echo $message; } 
             
-            if(isset($_SESSION['loggedin'])){
+            if($_SESSION['loggedin']){
                 echo '<form action="/srProject/account/userIndex.php" method="post">
                 <button type="submit" name="action" value="logOut">Log Out</button></form>';
             }
