@@ -23,12 +23,18 @@
         
         <?php 
         if(isset($sessionName)){
-            echo "Welcome $sessionName";
+            echo "<h2>Welcome $sessionName</h2>";
         }
         
         echo $showTimes; ?>
         
-        <form action="../sched/schedIndex.php" method="post">
+        
+        <?php
+        echo $seePersonal;
+        }
+        
+        if($_SESSION['clientData']['clearance'] == 3){
+            echo '<form action="../sched/schedIndex.php" method="post">
             <label for="date">Enter the Date: </label>
             <input type="date" name="date" required>
             <label for="startTime">Start Time: </label>
@@ -36,11 +42,7 @@
             <label for="endTime">End Time: </label>
             <input type="time" name="endTime" required>
             <button type="submit" name="action" value="addSched">Add Photoshoot Time</button>
-        </form>
-        
-        <?php 
-        if(isset($_SESSION['loggedin'])){
-            echo $seePersonal;
+            </form>';
         }
         ?>
     </main>
