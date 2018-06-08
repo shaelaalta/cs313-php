@@ -116,7 +116,7 @@ body {
     background-color: steelblue;
     position: relative;
     text-align: center;
-    font-size: 3.5vw;
+    font-size: 3.6vw;
     width: 70vw;
     margin: auto;
     top: 30px;
@@ -147,6 +147,10 @@ body {
 *****************************************************
 ****************************************************/
 @media (min-width: 500px) {
+    banner {
+        font-size: 20px;
+    }
+    
     nav { 
         font-size: 2.3vw;
     }
