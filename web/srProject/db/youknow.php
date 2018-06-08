@@ -10,12 +10,12 @@ function availableSched($times){
     foreach($times as $time){
         //$pd .= date_format($time['day'], 'l js F Y');
         $date = date_create($time['day']);
-        $pd .= date_format($date, 'l d F Y');
-        $timeS = date_create($time[timestart]);
+        $dateDay= date_format($date, 'l d F Y');
+        $timeS = date_create($time['timestart']);
         $stime = date_format($timeS, 'g:i A');
-        $timeE = date_create($time[timeend]);
+        $timeE = date_create($time['timeend']);
         $etime = date_format($timeE, 'g:i A');
-        $pd .= "$date from $stime to $etime ";
+        $pd .= "$dateDay from $stime to $etime ";
         $pd .= "<a href='../sched/schedIndex.php?action=bookTime&timeId=$time[schedid]'>Schedule</a><br>";
     }
     $pd .= "</div>";
