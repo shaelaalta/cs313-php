@@ -70,7 +70,7 @@ function removeAppointment($schedId){
 
 function getFullSched(){
     $db = connect();
-    $sql = 'SELECT usert.userfirstname, usert.userlastname, schedule.* FROM ((apt INNER JOIN usert ON apt.userid = usert.userid) INNER JOIN schedule ON apt.schedid = scuedule.schedid AND booked = 1)';
+    $sql = 'SELECT usert.userfirstname, usert.userlastname, schedule.* FROM ((apt INNER JOIN usert ON apt.userid = usert.userid) INNER JOIN schedule ON apt.schedid = schedule.schedid AND schedule.booked = 1)';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $specific = $stmt->fetchAll(PDO::FETCH_ASSOC);
