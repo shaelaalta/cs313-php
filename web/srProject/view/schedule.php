@@ -32,7 +32,7 @@
         <?php
         echo $seePersonal;
         
-        if($sessionClearance == 3){
+        if($_SESSION['clientData']['clearance'] == 3){
             echo '<form action="../sched/schedIndex.php" method="post">
             <label for="date">Enter the Date: </label>
             <input type="date" name="date" required>
