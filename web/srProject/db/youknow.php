@@ -24,4 +24,5 @@ function buildPersonalSched($personal){
         $pd .= "$pers[userfirstname] $pers[userlastname] your photoshoot is on $pers[day] from $pers[timestart]-$pers[timeend]<br>";
     }
     $pd .="</div>";
+    return $pd;
 }
