@@ -1,3 +1,9 @@
+<?php
+    if(!isset($_SESSION['loggedin'])){
+            header("location: /srProject/account/userIndex.php");
+        }
+?>
+
 <!DOCTYPE html>
 <html lang ="en">
   <head>
