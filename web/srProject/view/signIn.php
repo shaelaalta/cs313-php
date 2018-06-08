@@ -16,13 +16,12 @@
         <main id="signIn">
             <?php if(isset($message)) { echo $message; } 
             
-            if($_SESSION['loggedin']){
-                echo '<form action="/srProject/account/userIndex.php" method="post">
-                <button type="submit" name="action" value="logOut">Log Out</button></form>';
+            if(isset($_SESSION['loggedin'])){
+                echo 'logged in!';
             }
             ?>
             
-            <form action="/srProject/account/userIndex.php" method="post">
+            <form> action="/srProject/account/userIndex.php" method="post">
                 <label for="button">Haven't created an account yet?</label><button type="submit" name="action" value="newAccount">Create Account</button>
             </form>
             
@@ -34,6 +33,8 @@
                 <label for="password">Password: </label><input type="password" name="userpassword" placeholder="Your password. . . " required>
                 <button type="submit" name="action" value="login">Sign In</button>
             </form>
+            <form action="/srProject/account/userIndex.php" method="post">
+                <button type="submit" name="action" value="logOut">Log Out</button></form>
         </main>
 
     </body>
