@@ -110,7 +110,7 @@ switch ($action) {
         
     case 'forgot':
         $message = "You need to sign in before seeing the schedule";
-        header("location:/srProject/view/signIn.php");
+        include '../view/signIn.php';
         break;
         
     default:
