@@ -98,6 +98,12 @@ switch ($action) {
         header("location: /srProject/sched/schedIndex.php?action=viewSched");
         break;
     
+    case 'logOut':
+        session_unset();
+        session_destroy();
+        header("location:/srProject/index.php");
+        break;
+        
     case 'newAccount':
         include '../view/makeAccount.php';
         break;
