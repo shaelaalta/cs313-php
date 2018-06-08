@@ -33,7 +33,7 @@
         echo "<h3>Your Scheduled PhotoShoot</h3> $seePersonal";
         
         if($_SESSION['clientData']['clearance'] == 3){
-            echo '<h3>Enter or Delete A Time Slot</h3><form action="../sched/schedIndex.php" method="post">
+            echo '<h3>Enter A Time Slot</h3><form action="../sched/schedIndex.php" method="post">
             <label for="date">Enter the Date: </label>
             <input type="date" name="date" required>
             <label for="startTime">Start Time: </label>
