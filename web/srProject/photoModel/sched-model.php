@@ -12,7 +12,7 @@ function getTimes(){
 
 function addTime($date, $stime, $etime){
     $db = connect();
-    $sql = 'INSERT INTO schedule VALUES (DEFAULT, DATE_FORMAT(":date", "%a %b %Y"), :stime, :etime, 0)';
+    $sql = 'INSERT INTO schedule VALUES (DEFAULT, :date, :stime, :etime, 0)';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':date', $date, PDO::PARAM_STR);
     $stmt->bindValue(':stime', $stime, PDO::PARAM_STR);
