@@ -41,7 +41,6 @@
             <label for="endTime">End Time: </label>
             <input type="time" name="endTime" required>
             <button type="submit" name="action" value="addSched">Add Photoshoot Time</button>
-            <button type ="submit" name="action" value"delSched">Delete Photoshoot Time</button>
             </form>';
         }
         ?>
