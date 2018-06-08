@@ -20,7 +20,7 @@ function availableSched($times){
         if($sessionClearance == 3){
             $pd .= "<a href='../sched/schedIndex.php?action=delTime&timeId=$time[schedid]'>Delete</a>'\"; }?><br>";
         }
-        else { $pd .= "<br>"}
+        else { $pd .= "<br>"; }
     $pd .= "</div>";
     return $pd;
 }
