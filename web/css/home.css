@@ -145,9 +145,10 @@ footer {
     display: block;
     opacity: 0.6;
     position: absolute;
-    height: 60px;
+    height: 40px;
+    width: 100%;
     bottom: 0;
-    font-size: 60%;
+    font-size: 20px;
 }
 
 footer a{
