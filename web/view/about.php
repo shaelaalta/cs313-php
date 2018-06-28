@@ -28,7 +28,7 @@
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/header.php'; ?>
         
         <main id="about">
-           <img src="../images/hands.jpg">
+           <img src="../images/happy.jpg">
             <div id="myBlah">
                 <h2 id="mahName">Hello, I'm Awesome</h2>
                 <p>This is my family and after we added Dot to our happy little family I sturggled with finding large kid toys that weren't a total eyesore in my home, yet still functional and easy to store. This store I started became something I loved as I tried to answe all these problems I came across as a mom buying toys for my little Dot.</p>
