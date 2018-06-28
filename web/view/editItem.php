@@ -46,6 +46,6 @@
                 <button type="submit" name="action" value="deleteProd">Delete Product</button>
             </form>
         </main>
-        
+       <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/footer.php'; ?> 
     </body>
 </html>

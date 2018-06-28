@@ -39,6 +39,6 @@
         <main>
             <a href="/view/group3.html">Week 3 Group Work</a>
         </main>
-        
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/footer.php'; ?>
     </body>
 </html>

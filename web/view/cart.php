@@ -45,6 +45,6 @@
                 <button id="checkoutButton" type="submit" name="action" value="keepShop">Continue Shopping</button>
             </form>
         </main>
-
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/footer.php'; ?>
     </body>
 </html>

@@ -135,6 +135,35 @@ nav::after {
     max-width: 700px;
 }
 
+footer {
+    background-color: teal;
+    color: white;
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer a:link {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: white;
+}
+
+footer a:hover {
+    color: paleturquoise;
+    background-color: lightslategray;
+    font-size: 110%;
+}
+
+footer a:active {
+    color: white;
+}
+
 /****************************************************
 *****************************************************
 * MEDIUM SCREEN
