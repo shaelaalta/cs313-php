@@ -143,8 +143,11 @@ footer {
     margin-bottom: 0px;
     margin-top: 20px;
     display: block;
-    opacity: 0.8;
+    opacity: 0.6;
     padding: 10px;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
 }
 
 footer a{
