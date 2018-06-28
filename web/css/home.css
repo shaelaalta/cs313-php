@@ -141,7 +141,9 @@ footer {
     color: white;
     text-align: center;
     margin-bottom: 0px;
+    margin-top: 20px;
     display: block;
+    opacity: 0.8;
 }
 
 footer a{
@@ -159,7 +161,6 @@ footer a:visited {
 
 footer a:hover {
     color: paleturquoise;
-    background-color: lightslategray;
     font-size: 110%;
 }
 
