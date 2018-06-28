@@ -32,5 +32,6 @@
             <h2>Modern toys for the modern family</h2>
         </main>
         
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/footer.php'; ?>
     </body>
 </html>
