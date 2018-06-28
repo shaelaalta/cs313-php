@@ -144,8 +144,8 @@ footer {
     margin-top: 20px;
     display: block;
     opacity: 0.6;
-    padding: 10px;
-    position: relative;
+    position: absolute;
+    height: 60px;
     bottom: 0;
     font-size: 60%;
 }
