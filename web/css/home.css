@@ -145,9 +145,6 @@ footer {
     display: block;
     opacity: 0.6;
     padding: 10px;
-    position: absolute;
-    bottom: 0;
-    overflow: hidden;
 }
 
 footer a{
