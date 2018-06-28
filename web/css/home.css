@@ -149,9 +149,10 @@ footer {
     height: 40px;
     width: 100%;
     bottom: 0;
-    font-size: 1.6vw;
+    font-size: 1.7vw;
     padding: 10px;
     line-height: 20px;
+    margin-top: 20px;
 }
 
 footer a{
@@ -191,6 +192,11 @@ footer p{
         bottom: 0px;
 }
 
+#home + footer{
+    position: absolute;
+    bottom: 0px;
+}
+
 /****************************************************
 *****************************************************
 * MEDIUM SCREEN
@@ -220,6 +226,11 @@ footer p{
     
     .cNav li {
         display: block;
+    }
+    
+    #home + footer{
+    position: relative;
+    bottom: 0px;
     }
 }
 
