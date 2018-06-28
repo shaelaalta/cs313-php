@@ -136,6 +136,7 @@ nav::after {
 }
 
 footer {
+    clear: both;
     background-color: teal;
     color: white;
     text-align: center;
@@ -164,6 +165,10 @@ footer a:hover {
 
 footer a:active {
     color: white;
+}
+
+footer p{
+    margin: 0px;
 }
 
 /****************************************************
