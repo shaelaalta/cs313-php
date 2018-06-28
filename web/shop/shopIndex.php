@@ -27,7 +27,10 @@ switch ($action) {
     case 'about':
         include '../view/about.php';
         break;
-        
+    case 'contact':
+        include '../view/contact.php';
+        break;
+
     case 'showItem':
         $invId = filter_input(INPUT_GET, 'invId', FILTER_SANITIZE_NUMBER_INT);
         $products = getUnoProduct($invId);
