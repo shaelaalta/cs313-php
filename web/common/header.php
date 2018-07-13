@@ -2,7 +2,7 @@
     <div id=tipTop>
         <img id=logo src="/images/dotLogo.jpg">
         <div id='cartBlock'>
-            <a href="../shop/shopIndex.php?action=viewCart"><img id='shopCart' src="/images/babyCart.jpg"></a>
+            <a href="../shop/shopIndex.php?action=viewCart"><img id='shopCart' src="/images/babyCart.svg" width="140"></a>
             <br><p>
             <?php
                 if(isset($_SESSION['count'])){
