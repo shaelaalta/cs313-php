@@ -237,11 +237,13 @@ footer p{
     }
     
     #cartBlock img{
-        width: 140px;
+        width: 120px;
         margin: 4px;
     }
 
     #cartBlock p{
+        margin: 0px;
+        margin-top: -10px;
         text-align: center;
     }
     
