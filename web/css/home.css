@@ -15,7 +15,6 @@ body {
     padding: 0px;
     margin: 0px;
     min-height: 100%;
-    padding-bottom: 60px;
 }
 
 #logo {
@@ -139,20 +138,23 @@ nav::after {
     max-width: 700px;
 }
 
+
+footer, .push{
+    height: 60px;
+}
+
 footer {
-    box-sizing: border-box;
     clear: both;
     background-color: teal;
     color: white;
     text-align: center;
-    margin-top: -60px;
     display: block;
     opacity: 0.6;
-    height: 40px;
+    height: 60px;
     width: 100%;
-    bottom: 0;
-    font-size: 1.7vw;
-    padding: 10px;
+    font-size: 7.5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     line-height: 20px;
 }
 
@@ -180,22 +182,6 @@ footer a:active {
 
 footer p{
     margin: 0px;
-}
-
-#contact {
-    text-align: center;
-    font-size: 110%;
-    margin-top: 40px;
-}
-
-#contact + footer{
-        position: absolute;
-        bottom: 0px;
-}
-
-#home + footer{
-    position: absolute;
-    bottom: 0px;
 }
 
 /****************************************************
@@ -229,9 +215,8 @@ footer p{
         display: block;
     }
     
-    #home + footer{
-    position: relative;
-    bottom: 0px;
+    footer {
+        position: relative;
     }
 }
 
@@ -278,9 +263,5 @@ footer p{
         max-width: 900px;
         margin-left: auto;
         margin-right: auto;
-    }
-    
-    footer {
-        font-size: 14px;
     }
 }
