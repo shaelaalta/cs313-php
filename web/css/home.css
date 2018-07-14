@@ -14,7 +14,8 @@ body {
     font-family: 'Poiret One', cursive;
     padding: 0px;
     margin: 0px;
-    min-height: 100vw;
+    min-height: 100vh;
+    min-height: 100%;
 }
 
 #logo {
@@ -143,10 +144,10 @@ nav::after {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    height: 100vw;
-    margin-top: 15px;
+    height: 65vh;
+    margin-top: 45px;
+    text-align: center;
 }
-
 
 footer, .push{
     height: 60px;
