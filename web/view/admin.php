@@ -45,6 +45,6 @@
                 <button id="loginButton" type="submit" name="action" value="adminLogin">Log In</button>
             </form>
         </main>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/footer.php'; ?>
     </body>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/footer.php'; ?>
 </html>

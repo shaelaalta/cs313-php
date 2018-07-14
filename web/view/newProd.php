@@ -51,6 +51,6 @@
                 <button type="submit" name="action" value="addProd">Add Product</button>
             </form>
         </main>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/footer.php'; ?>
     </body>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/footer.php'; ?>
 </html>

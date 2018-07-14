@@ -34,6 +34,6 @@
             <h3>Email: notreal@me.com</h3>
             <h3>Location: North Pole 124</h3>
         </main>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/footer.php'; ?>
     </body>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/footer.php'; ?>
 </html>

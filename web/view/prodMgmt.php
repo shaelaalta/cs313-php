@@ -32,6 +32,6 @@
             <h2>Click to Edit Any Item</h2>
             <?php echo $prodDisplay; ?>
         </main>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/footer.php'; ?>
     </body>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/common/footer.php'; ?>
 </html>
