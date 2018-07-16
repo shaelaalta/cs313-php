@@ -219,7 +219,7 @@ switch ($action) {
         }
         
         if($image == ""){
-            $image = "DEFAULT";
+            $image = "/images/noImg.jpg";
         }
         
         $addedProd = addProd($image, $name, $desc, $price, $category);
