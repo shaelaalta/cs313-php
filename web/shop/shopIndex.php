@@ -213,9 +213,13 @@ switch ($action) {
         $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_STRING);
         $category = filter_input(INPUT_POST, 'category', FILTER_SANITIZE_NUMBER_INT);
         
-        if(empty($image) || empty($name) || empty($desc) || empty($price)){
+        if(empty($name) || empty($desc) || empty($price)){
             $message = "do not leave any field empty";
             include '../view/newProd.php';
+        }
+        
+        if($image == ""){
+            $image = "DEFAULT";
         }
         
         $addedProd = addProd($image, $name, $desc, $price, $category);
